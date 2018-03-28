@@ -1,4 +1,28 @@
 .latest-bg {
 
-    background-color: blanchedalmond;
+    background-color:#E7E8E1;
+}
+
+.latest-news {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.latest-news-padding {
+    padding-top: 1em;
+}
+
+/*********************/
+
+.custom-container {
+    position: relative;
+
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    
 }
