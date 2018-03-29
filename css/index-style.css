@@ -4,13 +4,25 @@
     height: 50px;
 }
 
+
 .li-sign-in {
     width: 15em;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.li-sign-in a {
+    border-top: 3px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+
+.li-sign-in a:hover {
+    border-bottom: 4px solid red;
 }
 
 .icon-position {
     position: absolute;
-    top: 16px;
+    top: 14px;
 }
 
 #sign-position {
@@ -21,11 +33,19 @@
 .li-wrapper {
     border-left: 1px solid white;
     border-right: 1px solid white;
+    width: 5.8em;
+    
+    
 }
 
 .li-wrapper a {
-    border-top: 8px solid transparent;
+    border-top: 3px solid transparent;
     border-bottom: 4px solid transparent;
+    
+}
+
+.li-wrapper a span {
+    padding-left: 10%;
 }
 
 .li-wrapper a:hover {
@@ -51,7 +71,7 @@
     padding-top: 1em;
 }
 
-/*********************/
+/***************************/
 
 .custom-container {
     position: relative;
