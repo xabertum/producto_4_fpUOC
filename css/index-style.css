@@ -45,7 +45,8 @@
 }
 
 .li-wrapper a span {
-    padding-left: 10%;
+    display: flex;
+    justify-content: center;
 }
 
 .li-wrapper a:hover {
