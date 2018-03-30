@@ -1,6 +1,19 @@
+function formatDate(date) {
+    var monthNames = [
+      "January", "February", "March",
+      "April", "May", "June", "July",
+      "August", "September", "October",
+      "November", "December"
+    ];
 
-function fecha () {
-    var datetime = "LastSync: " + new Date().today() + " @ " + new Date().timeNow();
-}
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var day = date.getDate();
+    var monthIndex = date.getMonth();
+      
+    return days[new Date().getDay()] + ' , ' + day + ' ' + monthNames[monthIndex]; 
+  }
 
 
+
+
+document.getElementById("date").innerHTML = formatDate(new Date);
