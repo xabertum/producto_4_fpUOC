@@ -14,6 +14,7 @@
 
     <!-- Custom CSS Stylesheets -->
     <link href="css/index-style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/news-style.css">
 
     <!-- CDN's -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
@@ -113,15 +114,16 @@
     <div class="container">
         <div class="wrapper-news">
             <header>
-                <h2 class="editor">Esto es una prueba...</h2>
+                <h2 id="editor0">Esto es una prueba...</h2>
                 <i class="fas fa-clock"></i>
                 <span>June 2, 2017</span>
             </header>
-            <section class="editor">
+
+            <div id="editor2">
                 <div class="container">
                     <div class="row">
                         <div class="col-3">
-                            <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tristique nisl. Vestibulum cursus
+                            <p id="editor1" class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tristique nisl. Vestibulum cursus
                                 ac mi sed dapibus. Curabitur consequat velit urna, nec euismod sem gravida ac. Sed consectetur
                                 orci eu nisl lobortis, sed dapibus urna aliquet. Nam nec tellus sit amet ligula porttitor
                                 accumsan ut non ante. Proin tristique sem nec quam tincidunt ornare. Class aptent taciti
@@ -130,16 +132,45 @@
                                 eu ultricies imperdiet. Quisque auctor nunc vitae felis hendrerit, eget pretium enim hendrerit.
                                 Aenean sapien ex, pellentesque in metus sed, faucibus varius orci. Nulla ornare quis nulla
                                 vitae ornare. Cras ac massa nibh. Nullam vitae felis in magna finibus eleifend sit amet vitae
-                                tellus.</p>
+                                tellus.
+                            </p>
+
+                            <img class="img-fluid" src="img/pexels-photo-220201.jpeg" alt="photo news">
                         </div>
+
+                        <div class="col-3">
+                            <p id="editor2" class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tristique nisl. Vestibulum cursus
+                                ac mi sed dapibus. Curabitur consequat velit urna, nec euismod sem gravida ac. Sed consectetur
+                                orci eu nisl lobortis, sed dapibus urna aliquet. Nam nec tellus sit amet ligula porttitor
+                                accumsan ut non ante. Proin tristique sem nec quam tincidunt ornare. Class aptent taciti
+                                sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec dictum libero
+                                et gravida egestas. Proin molestie orci eget quam aliquet vestibulum. Donec efficitur felis
+                                eu ultricies imperdiet. Quisque auctor nunc vitae felis hendrerit, eget pretium enim hendrerit.
+                                Aenean sapien ex, pellentesque in metus sed, faucibus varius orci. Nulla ornare quis nulla
+                                vitae ornare. Cras ac massa nibh. Nullam vitae felis in magna finibus eleifend sit amet vitae
+                                tellus.
+                            </p>
+
+                        </div>
+
+
+
+
                     </div>
                 </div>
+            </div>
 
 
 
-            </section>
 
         </div>
+    </div>
+
+
+
+
+
+    </div>
 
     </div>
 
@@ -196,15 +227,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
 
     <script>
         InlineEditor
-            .create(document.querySelector('.editor'))
+            .create(document.querySelector('#editor0'))
             .catch(error => {
                 console.error(error);
             });
     </script>
+
+
+    <script>
+        InlineEditor
+            .create(document.querySelector('#editor1'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
 
 </body>
 
