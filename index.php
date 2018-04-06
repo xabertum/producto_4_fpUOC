@@ -242,7 +242,7 @@ include_once('includes/connection.php');
                 </div>
 
                 <div class="col-3">
-                    <img class="img-fluid moda" src="img/pexels-photo-715821.jpeg" alt="">
+                    <img class="img-fluid moda" height = "200"src="img/pexels-photo-715821.jpeg" alt="">
                     <img class="img-fluid moda" src="img/pexels-photo-715836.jpeg" alt="">
                 </div>
 
