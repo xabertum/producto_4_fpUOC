@@ -11,31 +11,23 @@ body {
 
 .wrapper {
     background-color: white;
-    width: 40%;
+    width: 60%;
     margin-top: 13%;
     padding: 35px;
     border: 1px solid black;
     
 }
 
+
 input[type=text] {
-    border: none;
-    border-bottom: 1px solid black;
+    
+    border: 2px solid #8998af;
+    border-radius: 8px;
     margin-top: 8%;
+    padding: 5px;
 }
 
-hr {
-    background-color: grey;
+::placeholder {
+	color: #ed9d9a;
+	
 }
-
-#button {
-    position: relative;
-    left: 13%;
-    padding-top: 15%;
-    padding-bottom: 10%;
-}
-
-h4 {
-    font-size: 1.1em;
-}
-
