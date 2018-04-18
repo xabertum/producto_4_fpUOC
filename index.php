@@ -28,88 +28,59 @@ include_once('includes/connection.php');
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">World News</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    	<!-- NAVBAR -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand" href="#">World News</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarsExample07" aria-controls="navbarsExample07"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
-                    <div class="li-sign-in">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="sign-in.html">
-                                <img class="icon-position" src="img/ic_account_circle_white_48dp_1x.png" height="24px" alt="Sign-In Icon">
-                                <span id="sign-position">Sign-In</span>
-                            </a>
-                        </li>
-                    </div>
-                    <div class="li-wrapper li-color-1">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="">
-                                <span>Home</span>
-                            </a>
-                        </li>
-                    </div>
-                    <div class="li-wrapper">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="">
-                                <span>News</span>
-                            </a>
-                        </li>
-                    </div>
-                    <div class="li-wrapper">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="">
-                                <span>Sports</span>
-                            </a>
-                        </li>
-                    </div>
-                    <div class="li-wrapper">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="">
-                                <span>Weather</span>
-                            </a>
-                        </li>
-                    </div>
-                    <div class="li-wrapper">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="">
-                                <span>Shop</span>
-                            </a>
-                        </li>
-                    </div>
-                    <div class="li-wrapper">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="">
-                                <span>Earth</span>
-                            </a>
-                        </li>
-                    </div>
-                    <div class="li-wrapper">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="">
-                                <span>Travel</span>
-                            </a>
-                        </li>
-                    </div>
-                    <div class="li-wrapper">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="">
-                                <span>Capital</span>
-                            </a>
-                        </li>
-                    </div>
+			<div class="collapse navbar-collapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active li-sign-in"><a class="nav-link"
+						href="sign-in.html"> <img class="icon-position"
+							src="img/ic_account_circle_white_48dp_1x.png" height="24px"
+							alt="Sign-In Icon"> <span id="sign-position">Sign-In</span>
+					</a></li>
 
+					<li class="nav-item active li-wrapper li-color-1"><a
+						class="nav-link" href=""> <span>Home</span>
+					</a></li>
 
-                </ul>
+					<li class="nav-item active li-wrapper"><a class="nav-link"
+						href=""> <span>News</span>
+					</a></li>
 
-            </div>
-        </div>
-    </nav>
+					<li class="nav-item active li-wrapper"><a class="nav-link"
+						href=""> <span>Sports</span>
+					</a></li>
+
+					<li class="nav-item active li-wrapper"><a class="nav-link"
+						href=""> <span>Weather</span>
+					</a></li>
+
+					<li class="nav-item active li-wrapper"><a class="nav-link"
+						href=""> <span>Shop</span>
+					</a></li>
+
+					<li class="nav-item active li-wrapper"><a class="nav-link"
+						href=""> <span>Earth</span>
+					</a></li>
+
+					<li class="nav-item active li-wrapper"><a class="nav-link"
+						href=""> <span>Travel</span>
+					</a></li>
+
+					<li class="nav-item active li-wrapper"><a class="nav-link"
+						href=""> <span>Capital</span>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
     <!-- LATEST NEWS SECTION -->
     <div class="container-fluid latest-bg">
