@@ -1,11 +1,43 @@
 <?php 
 
-try {
-    $pdo = new PDO ('mysql:host=localhost;dbname=phplogin', 'root', '');
 
-} catch (PDOException $e) {
-    exit('Database error.');
+class Conexion {
+    
+    /**
+     * Conecta con la base de datos
+     * 
+     * @return PDO
+     */
+    public static function conectar() {
+        
+        try {
+           
+            $pdo = new PDO ('mysql:host=localhost;dbname=phplogin', 'root', '');
+    
+            return $pdo;
+            
+        } catch (PDOException $e) {
+           die(($e->getMessage()));
+           
+        }       
+        
+    }
+    
+    
 }
 
+Conexion::conectar();
 
-?>
+
+
+
+
+
+
+
+
+
+
+
+
+
