@@ -1,5 +1,7 @@
 <?php
-include_once ('includes/connection.php');
+include '../controlador/UsuarioControlador.php';
+
+echo UsuarioControlador::login('admin', 1234);
 
 ?>
 
