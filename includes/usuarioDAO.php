@@ -32,7 +32,8 @@ class UsuarioDAO extends Conexion {
         self::getConexion();
         
         $resultado = self::$cnx->prepare($query);
-        
+        $resultado->bindParam(":username", $username->getUsername());
+        $resultado->bindParam(":password", $password->getPassword());
         
         
         
