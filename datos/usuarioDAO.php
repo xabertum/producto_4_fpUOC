@@ -1,7 +1,7 @@
 <?php 
 
 include 'conexion.php';
-include '../entidades/usuario.php';
+include '../entidades/Usuario.php';
 
 class UsuarioDAO extends Conexion {
     
@@ -32,8 +32,8 @@ class UsuarioDAO extends Conexion {
         self::getConexion();
         
         $resultado = self::$cnx->prepare($query);
-        $resultado->bindParam(":username", $username->getUsername());
-        $resultado->bindParam(":password", $password->getPassword());
+        $resultado->bindParam(":username", $usuario->getUsername());
+        $resultado->bindParam(":password", $usuario->getPassword());
         
         $resultado->execute();
         

@@ -26,7 +26,7 @@ class Conexion {
     
 }
 
-Conexion::conectar();
+
 
 
 
