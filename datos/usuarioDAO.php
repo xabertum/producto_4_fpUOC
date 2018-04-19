@@ -1,7 +1,7 @@
 <?php 
 
 include 'conexion.php';
-include '../datos/usuario.php';
+include '../entidades/usuario.php';
 
 class UsuarioDAO extends Conexion {
     
