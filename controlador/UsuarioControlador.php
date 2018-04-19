@@ -11,7 +11,7 @@ class UsuarioControlador {
         $obj_usuario->setUsername($usuario);
         $obj_usuario->setPassword($password);
         
-        UsuarioDAO::login($obj_usuario);
+        return UsuarioDAO::login($obj_usuario);
         
         
         

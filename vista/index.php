@@ -1,8 +1,7 @@
 <?php
 include '../controlador/UsuarioControlador.php';
 
-echo UsuarioControlador::login('adminn', 1234);
-echo 'asasasasd';
+echo UsuarioControlador::login('editor', 1234);
 
 ?>
 

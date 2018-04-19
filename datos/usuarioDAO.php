@@ -41,7 +41,7 @@ class UsuarioDAO extends Conexion {
         
         $resultado->execute();
         
-        if (count($resultado)) {
+        if ($resultado->rowCount() > 0 ) {
             return 'ok';
         }
         
