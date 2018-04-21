@@ -1,11 +1,3 @@
-<?php
-include '../controlador/UsuarioControlador.php';
-
-echo UsuarioControlador::login('editor', 1234);
-
-?>
-
-
 <!DOCTYPE html>
 <html>
 
