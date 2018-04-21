@@ -10,15 +10,6 @@ class Usuario {
     private $rol;
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     //Getters & Setters
     
     

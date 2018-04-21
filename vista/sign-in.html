@@ -1,10 +1,3 @@
-<?php
-include '../controlador/UsuarioControlador.php';
-
-echo UsuarioControlador::login('editor', 1234);
-
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -12,8 +5,7 @@ echo UsuarioControlador::login('editor', 1234);
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>WN - SignIn</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
     
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -29,9 +21,9 @@ echo UsuarioControlador::login('editor', 1234);
     <div class="container">
         <div class="wrapper">
             <h3>World News Sign-In</h3>
-            <form action="login.php" method="post" autocomplete="off">
-                <input type="text" placeholder="Username" size="46%" name="username" autofocus> <br>
-                <input type="password" placeholder="Password" size="46%" name="password" autocomplete="off">
+            <form action="validarCode.php" method="post" autocomplete="off">
+                <input type="text" placeholder="Username" size="46%" name="usuario" autofocus> <br>
+                <input type="password" placeholder="Password" size="46%" name="password">
                 <input id="button" type="image" src="img/Group 9.png" width="70%" >
             </form>
 			<hr>
