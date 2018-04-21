@@ -34,8 +34,7 @@ echo UsuarioControlador::login('editor', 1234);
                 <input type="text" placeholder="Password" size="46%" name="password" autocomplete="off">
                 <input id="button" type="image" src="img/Group 9.png" width="70%" >
             </form>
-			<a href="#">Forgot your password?</a>
-            <hr>
+			<hr>
             <h4>Don't have a World News account? </h4>
             <a href="register.html">Register Now</a>
 
