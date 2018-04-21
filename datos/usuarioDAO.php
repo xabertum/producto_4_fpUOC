@@ -1,33 +1,32 @@
-<?php 
-
+<?php
 include 'conexion.php';
 include '../entidades/Usuario.php';
 
-class UsuarioDAO extends Conexion {
-    
+class UsuarioDAO extends Conexion
+{
+
     protected static $cnx;
-    
-    private static function getConexion () {
-        
+
+    private static function getConexion ()
+    {
         self::$cnx = Conexion::conectar();
     }
-    
-    private static function desconectar() {
-        
+
+    private static function desconectar ()
+    {
         self::$cnx = NULL;
-        
     }
-    
+
     /**
-     * 
+     *
      * Metodo que sirve para validar el login
-     * 
+     *
      * @param object $usuario
      * @return boolean
      */
-    public static function login($usuario) {
-        
-        $query = "SELECT username, rol FROM usuarios WHERE username = :username AND password = :password";
+    public static function login ($usuario)
+    {
+        $query = "SELECT * FROM usuarios WHERE username = :username AND password = :password";
         
         self::getConexion();
         
@@ -41,16 +40,16 @@ class UsuarioDAO extends Conexion {
         
         $resultado->execute();
         
-        if ($resultado->rowCount() > 0 ) {
-
+        if ($resultado->rowCount() > 0) {
             
-            return 'ok';
+            $filas = $resultado->fetch();
+            if ($filas['username'] == $usuario->getUsername() &&
+                    $filas['password'] == $usuario->getPassword()) {
+                
+                return 'ok';
+            }
         }
         
         return 'falso';
-        
-        
-        
     }
-    
 }
