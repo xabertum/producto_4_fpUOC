@@ -31,7 +31,7 @@ echo UsuarioControlador::login('editor', 1234);
             <h3>World News Sign-In</h3>
             <form action="login.php" method="post" autocomplete="off">
                 <input type="text" placeholder="Username" size="46%" name="username" autofocus> <br>
-                <input type="text" placeholder="Password" size="46%" name="password" autocomplete="off">
+                <input type="password" placeholder="Password" size="46%" name="password" autocomplete="off">
                 <input id="button" type="image" src="img/Group 9.png" width="70%" >
             </form>
 			<hr>
