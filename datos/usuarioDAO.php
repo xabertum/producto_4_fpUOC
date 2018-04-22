@@ -46,10 +46,10 @@ class UsuarioDAO extends Conexion
             if ($filas['username'] == $usuario->getUsername() &&
                     $filas['password'] == $usuario->getPassword()) {
                 
-                return 'ok';
+                return true;
             }
         }
         
-        return 'falso';
+        return false;
     }
 }
