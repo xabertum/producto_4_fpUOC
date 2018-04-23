@@ -8,7 +8,7 @@ $(document).ready(function() {
 			type: $(this).attr("method"),
 			url: $(this).attr("action"),
 			data: $(this).serialize(),
-			success:function() {
+			success: function() {
 				alert("conectado");
 			},
 			error: function () {
