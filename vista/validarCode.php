@@ -1,6 +1,8 @@
 <?php
 include '../controlador/UsuarioControlador.php';
 
+header('Content-type: application/json');
+
 $resultado = array();
 
 
