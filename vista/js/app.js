@@ -8,8 +8,7 @@ $(document).ready(function() {
 			data : $(this).serialize(),
 			success : function(response) {
 				
-				console.log(response);
-
+				
 				if (response.estado == "true") {
 					$("body").overhang({
 						type : "success",
