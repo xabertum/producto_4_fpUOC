@@ -13,7 +13,16 @@ function formatDate(date) {
     return days[new Date().getDay()] + ' , ' + day + ' ' + monthNames[monthIndex]; 
   }
 
-
-
-
 document.getElementById("date").innerHTML = formatDate(new Date);
+
+
+
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
+
