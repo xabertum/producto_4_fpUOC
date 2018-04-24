@@ -1,5 +1,6 @@
 <?php
 include '../controlador/UsuarioControlador.php';
+include '../helps/helps.php';
 
 header('Content-type: application/json');
 
