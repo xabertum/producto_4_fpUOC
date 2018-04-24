@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 ?>
@@ -42,8 +41,9 @@ session_start();
 					<li class="nav-item active li-sign-in"><a class="nav-link"
 						href="sign-in.html"> <img class="icon-position"
 							src="img/ic_account_circle_white_48dp_1x.png" height="24px"
-							alt="Sign-In Icon"> <span id="sign-position"><?php echo $_SESSION["usuario"]["nombre"]?></span>
-							
+							alt="Sign-In Icon"> <span id="sign-position"><?php echo $_SESSION["usuario"]["nombre"]?>
+							/<?php echo $_SESSION["usuario"]["rol"]==1 ?'Editor':'';?></span>
+
 					</a></li>
 
 					<li class="nav-item active li-wrapper li-color-1"><a
