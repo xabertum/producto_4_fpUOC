@@ -42,7 +42,7 @@ session_start();
 						href="sign-in.html"> <img class="icon-position"
 							src="img/ic_account_circle_white_48dp_1x.png" height="24px"
 							alt="Sign-In Icon"> <span id="sign-position"><?php echo $_SESSION["usuario"]["nombre"]?>
-							/<?php echo $_SESSION["usuario"]["rol"]==1 ?'Editor':'';?></span>
+							/ <?php echo $_SESSION["usuario"]["rol"]==1 ?'Editor':'';?></span>
 
 					</a></li>
 
