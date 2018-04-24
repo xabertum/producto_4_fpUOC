@@ -42,7 +42,7 @@ session_start();
 						href=""> <img class="icon-position"
 							src="img/exit_delete_close_remove_door-48.png" height="24px"
 							alt="Sign-In Icon"> <span id="sign-position"><?php echo $_SESSION["usuario"]["nombre"]?>
-							/ <?php echo $_SESSION["usuario"]["rol"] == 1 ?'Editor':'';?></span>
+							/ <?php echo $_SESSION["usuario"]["rol"] == 1 ? 'Editor':'';?></span>
 
 					</a></li>
 
