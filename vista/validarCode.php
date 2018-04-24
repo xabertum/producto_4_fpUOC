@@ -2,6 +2,8 @@
 include '../controlador/UsuarioControlador.php';
 include '../helps/helps.php';
 
+session_start();
+
 header('Content-type: application/json');
 
 $resultado = array();
@@ -18,10 +20,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         );
         
         if (UsuarioControlador::login($txtUsuario, $txtPassword)) {
-            return print(json_encode($resultado));
             
             $usuario = UsuarioControlador::getUser($txtUsuario, $txtPassword);
-                                    
+            $_SESSION["usuario"] = array(
+                    "id" => $usuario->getId(),
+                    "nombre" => $usuario->getNombre(),
+                    "rol" => $usuario->getRol(),
+                    "username" => $usuario->getUsername(),            
+            );
+            return print(json_encode($resultado));
+            
         }
     }
 }
