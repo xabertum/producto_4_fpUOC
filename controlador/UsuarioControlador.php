@@ -13,7 +13,7 @@ class UsuarioControlador
         return UsuarioDAO::login($obj_usuario);
     }
 
-    public function getUser ($usuario, $password)
+    public static function getUser ($usuario, $password)
     {
         
         $obj_usuario = new Usuario();

@@ -18,7 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         );
         
         if (UsuarioControlador::login($txtUsuario, $txtPassword)) {
-            return print(json_encode($resultado));
+            //return print(json_encode($resultado));
+            
+            $usuario = UsuarioControlador::getUser($usuario, $password);
+            
+            echo $usuario->getNombre();
+            
         }
     }
 }

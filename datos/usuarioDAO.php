@@ -56,7 +56,7 @@ class UsuarioDAO extends Conexion
     /**
      * 
      * @param object $usuario
-     * @return boolean
+     * @return object
      */
     public static function getUser ($usuario)
     {
