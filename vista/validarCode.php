@@ -10,8 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     
     if (isset($_POST["usuario"]) && isset($_POST["password"])) {
         
-        $txtUsuario = $_POST['usuario'];
-        $txtPassword = $_POST['password'];
+        $txtUsuario = validar_campo($_POST['usuario']);
+        $txtPassword = validar_campo($_POST['password']);
         
         $resultado = array(
                 "estado" => "true"

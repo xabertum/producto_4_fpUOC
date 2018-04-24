@@ -5,13 +5,31 @@ class Usuario {
     // Variables internas
     
     private $id;
+    private $nombre;
     private $username;
     private $password;
     private $rol;
     
     
+
+
     //Getters & Setters
     
+    /**
+     * @return mixed
+     */
+    public function getNombre ()
+    {
+        return $this->nombre;
+    }
+    
+    /**
+     * @param mixed $nombre
+     */
+    public function setNombre ($nombre)
+    {
+        $this->nombre = $nombre;
+    }    
     
     /**
      * @return mixed

@@ -52,4 +52,36 @@ class UsuarioDAO extends Conexion
         
         return false;
     }
+    
+    /**
+     * 
+     * @param object $usuario
+     * @return boolean
+     */
+    public static function getUser ($usuario)
+    {
+        $query = "SELECT * FROM usuarios WHERE username = :username AND password = :password";
+        
+        self::getConexion();
+        
+        $resultado = self::$cnx->prepare($query);
+        
+        $_usuario = $usuario->getUsername();
+        $_password = $usuario->getPassword();
+        
+        $resultado->bindParam(":username", $_usuario);
+        $resultado->bindParam(":password", $_password);
+        
+        $resultado->execute();
+        
+        $filas = $resultado->fetch();
+        
+        $usuario = new Usuario();
+        $usuario->setId($filas["id"]);
+        $usuario->setUsername($filas["username"]);
+        $usuario->se
+    }
+    
+    
+    
 }
