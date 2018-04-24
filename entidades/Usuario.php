@@ -8,8 +8,7 @@ class Usuario {
     private $nombre;
     private $username;
     private $password;
-    private $rol;
-    
+    private $rol;    
     
 
 
