@@ -48,7 +48,7 @@ if (isset($_SESSION['usuario'])) {
 			<div class="collapse navbar-collapse">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active li-sign-in"><a class="nav-link"
-						href="index.php"> <img class="icon-position"
+						href="cerrar-sesion.php"> <img class="icon-position"
 							src="img/exit_delete_close_remove_door-48.png" height="24px"
 							alt="Sign-In Icon"> <span id="sign-position"><?php echo $_SESSION["usuario"]["nombre"]?>
 							/ <?php echo $_SESSION["usuario"]["rol"] == 0 ? 'Admin':'';?></span>
