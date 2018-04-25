@@ -4,7 +4,7 @@
 /**
  * Funcion que sirva para validar y limpiar un campo
  * 
- * @param  $campo Tiene que ser tipo input. 
+ * @param  $campo
  * @return string
  */
 function validar_campo ($campo)
