@@ -7,7 +7,7 @@ if (isset($_SESSION['usuario'])) {
         header("location:editor.php");
     } elseif ($_SESSION['usuario']['rol'] == 2) {
         header("location:periodista.php");
-    } 
+    }
 }
 
 ?>
