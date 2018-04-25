@@ -3,12 +3,12 @@ session_start();
 
 if (isset($_SESSION['usuario'])) {
     
-    if ($_SESSION['usuario']['rol'] == 1) {
-        header("location:editor.php");
-    } elseif ($_SESSION['usuario']['rol'] == 2) {
-        header("location:periodista.php");
-    } 
+    if ($_SESSION['usuario']['rol'] == 0) {
+        header("location:admin.php");
+    }
+    
 }
+
 
 
 ?>
@@ -52,7 +52,7 @@ if (isset($_SESSION['usuario'])) {
 						href="index.php"> <img class="icon-position"
 							src="img/exit_delete_close_remove_door-48.png" height="24px"
 							alt="Sign-In Icon"> <span id="sign-position"><?php echo $_SESSION["usuario"]["nombre"]?>
-							/ <?php echo $_SESSION["usuario"]["rol"] == 0 ? 'Admin':'';?></span>
+							/ <?php echo $_SESSION["usuario"]["rol"] == 2 ? 'Periodista':'';?></span>
 
 					</a></li>
 
