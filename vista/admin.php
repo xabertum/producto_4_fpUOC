@@ -5,9 +5,12 @@ if (isset($_SESSION['usuario'])) {
     
     if ($_SESSION['usuario']['rol'] == 1) {
         header("location:editor.php");
+    
     } elseif ($_SESSION['usuario']['rol'] == 2) {
         header("location:periodista.php");
     }
+} else {
+    header('location: sign-in.html');
 }
 
 ?>

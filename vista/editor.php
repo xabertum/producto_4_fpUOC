@@ -1,15 +1,11 @@
 <?php
 session_start();
 
-if (isset($_SESSION['usuario'])) {
+if ($_SESSION['usuario']['rol'] == 1) {
     
-    if ($_SESSION['usuario']['rol'] == 0) {
-        header("location:admin.php");
-    }
-    
+} else {
+    header("location: admin.php");
 }
-
-
 
 ?>
 
