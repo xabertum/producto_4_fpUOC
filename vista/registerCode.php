@@ -1,7 +1,6 @@
 <?php
 include '../controlador/UsuarioControlador.php';
 include '../helps/helps.php';
-
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -14,8 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $txtPassword = validar_campo($_POST['password']);
         $txtPassword2 = validar_campo($_POST['password2']);
         $txtRol = 2;
-
+        
         if (UsuarioControlador::registrar($txtNombre, $txtUsername, $txtPassword, $txtRol)) {
+
+            var_dump($txtRol);
 
             $usuario = UsuarioControlador::getUser($txtUsuario, $txtPassword);
             $_SESSION["usuario"] = array(
@@ -24,10 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 "rol" => $usuario->getRol(),
                 "username" => $usuario->getUsername(),
             );
-            header("location: periodista.php");
+            header("location: admin.php");
         }
     }
 
 } else {
-    header("location: register.html?error=1");
+    header("location: register.html");
 }

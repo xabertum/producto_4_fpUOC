@@ -30,6 +30,7 @@ class UsuarioControlador
         $obj_usuario->setNombre($nombre);
         $obj_usuario->setUsername($username);
         $obj_usuario->setPassword($password);
+        $obj_usuario->setRol($rol);
 
         return UsuarioDAO::registrar($obj_usuario);
 

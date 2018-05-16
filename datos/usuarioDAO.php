@@ -102,25 +102,25 @@ class UsuarioDAO extends Conexion
 
         $resultado = self::$cnx->prepare($query);
 
-        $_nombre =  $usuario->getNombre();
+        $_nombre = $usuario->getNombre();
         $_username = $usuario->getUsername();
         $_password = $usuario->getPassword();
         $_rol = $usuario->getRol();
 
-        $resultado->bindParam(":nombre", $_nombre );
-        $resultado->bindParam(":username", $_username);        
+        $resultado->bindParam(":nombre", $_nombre);
+        $resultado->bindParam(":username", $_username);
         $resultado->bindParam(":password", $_password);
         $resultado->bindParam(":rol", $_rol);
 
         $resultado->execute();
-        
-        if($resultado->execute()) {
+
+        if ($resultado->execute()) {
             return true;
+        } else {
+
+            return false;
+
         }
-
-        return false;
-
-       
 
     }
 
