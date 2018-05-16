@@ -54,8 +54,9 @@ class UsuarioDAO extends Conexion
     }
 
     /**
+     * Función que sirve para recuperar el usuario
      *
-     * @param object $usuario
+     *  @param object $usuario
      * @return object
      */
     public static function getUser($usuario)
@@ -90,7 +91,7 @@ class UsuarioDAO extends Conexion
  * Metodo que sirve para registrar usuarios
  *
  * @param object $usuario
- * @return object
+ * @return boolean
  */
     public static function registrar($usuario)
     {
