@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $txtRol = 2;
    
 
-        if (UsuarioControlador::registro($txtNombre, $txtUsername, $txtPassword, $txtRol)) {
+        if (UsuarioControlador::registrar($txtNombre, $txtUsername, $txtPassword, $txtRol)) {
 
             $usuario = UsuarioControlador::getUser($txtUsuario, $txtPassword);
             $_SESSION["usuario"] = array(
@@ -25,8 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 "rol" => $usuario->getRol(),
                 "username" => $usuario->getUsername(),
             );
-            return print(json_encode($resultado));
+            header("location: periodista.php");
         }
     }
 }
+
+header ("location: resgister.html?error=1");
 
