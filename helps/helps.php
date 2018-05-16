@@ -1,8 +1,6 @@
 <?php
-
-
 /**
- * Funcion que sirva para validar y limpiar un campo
+ * Funcion que sirve para validar y limpiar un campo
  * 
  * @param  $campo
  * @return string
