@@ -77,7 +77,7 @@ class UsuarioDAO extends Conexion
         $filas = $resultado->fetch();
 
         $usuario = new Usuario();
-        $usuario->setId($filas["id"]);
+        //$usuario->setId($filas["id"]);
         $usuario->setNombre($filas["nombre"]);
         $usuario->setRol($filas["rol"]);
         $usuario->setUsername($filas["username"]);
@@ -87,35 +87,32 @@ class UsuarioDAO extends Conexion
     }
 
 /**
+ * Metodo que sirve para registrar usuarios
  *
  * @param object $usuario
  * @return object
  */
     public static function registrar($usuario)
     {
-        $query = "SELECT * FROM usuarios WHERE username = :username AND password = :password";
+        $query = "INSERT INTO usuarios (nombre, username, password, rol)
+                    VALUES (:nombre, :username, :password, :rol)";
 
         self::getConexion();
 
         $resultado = self::$cnx->prepare($query);
 
-        $_usuario = $usuario->getUsername();
-        $_password = $usuario->getPassword();
+        $resultado->bindParam(":nombre", $usuario->getNombre());
+        $resultado->bindParam(":username", $usuario->getNombre());        
+        $resultado->bindParam(":password", $usuario->getPassword());
+        $resultado->bindParam(":rol", $usuario->getRol());
 
-        $resultado->bindParam(":username", $_usuario);
-        $resultado->bindParam(":password", $_password);
+        if($resultado->execute()) {
+            return true;
+        }
 
-        $resultado->execute();
+        return false;
 
-        $filas = $resultado->fetch();
-
-        $usuario = new Usuario();
-        $usuario->setId($filas["id"]);
-        $usuario->setNombre($filas["nombre"]);
-        $usuario->setRol($filas["rol"]);
-        $usuario->setUsername($filas["username"]);
-
-        return $usuario;
+       
 
     }
 
