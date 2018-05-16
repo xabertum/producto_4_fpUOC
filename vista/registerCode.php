@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $txtUsername = validar_campo($_POST['username']);
         $txtPassword = validar_campo($_POST['password']);
         $txtPassword2 = validar_campo($_POST['password2']);
-        $txtRol = 2; 
+        $txtRol = 2;
 
         if (UsuarioControlador::registrar($txtNombre, $txtUsername, $txtPassword, $txtRol)) {
 
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             header("location: periodista.php");
         }
     }
+
+} else {
+    header("location: register.html?error=1");
 }
-
-header ("location: resgister.html?error=1");
-
