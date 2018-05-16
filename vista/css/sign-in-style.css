@@ -22,7 +22,10 @@ body {
     border: none;
     border-bottom: 1px solid black;
     margin-top: 8%;
+    width: 95%;    
 }
+
+
 
 hr {
     background-color: grey;
