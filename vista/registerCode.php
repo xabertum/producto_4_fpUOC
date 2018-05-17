@@ -28,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             header("location: admin.php");
         }
     }
-
-} else {
-    header("location: register.html");
 }
+    header("location: register.html");
+
