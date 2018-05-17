@@ -14,3 +14,4 @@ function validar_campo ($campo)
     return $campo;
 }
 
+function probando (){}
