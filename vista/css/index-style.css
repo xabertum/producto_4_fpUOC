@@ -78,7 +78,7 @@ h4 {
 
 #date {
     position: absolute;
-    margin-top: 1%;
+    margin-top: 2%;
     
 }
 
@@ -89,8 +89,8 @@ h4 {
 }
 
 .latest-news {
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 4em;
+    padding-bottom: 4em;
 }
 
 .latest-news-padding {
