@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $txtPassword = validar_campo($_POST['password']);
         $txtPassword2 = validar_campo($_POST['password2']);
         $txtRol = 2;
-        
+
         if (UsuarioControlador::registrar($txtNombre, $txtUsername, $txtPassword, $txtRol)) {
 
             var_dump($txtRol);
@@ -29,5 +29,4 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         }
     }
 }
-    header("location: register.html");
-
+header("location: register.html");
