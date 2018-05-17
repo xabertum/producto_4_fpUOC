@@ -2,7 +2,7 @@
 session_start();
 
 if ($_SESSION['usuario']['rol'] == 1) {
-    
+
 } else {
     header("location: admin.php");
 }
@@ -47,8 +47,8 @@ if ($_SESSION['usuario']['rol'] == 1) {
 					<li class="nav-item active li-sign-in"><a class="nav-link"
 						href="cerrar-sesion.php"> <img class="icon-position"
 							src="img/exit_delete_close_remove_door-48.png" height="24px"
-							alt="Sign-In Icon"> <span id="sign-position"><?php echo $_SESSION["usuario"]["nombre"]?>
-							/ <?php echo $_SESSION["usuario"]["rol"] == 1 ? 'Editor':'';?></span>
+							alt="Sign-In Icon"> <span id="sign-position"><?php echo $_SESSION["usuario"]["nombre"] ?>
+							/ <?php echo $_SESSION["usuario"]["rol"] == 1 ? 'Editor' : ''; ?></span>
 
 					</a></li>
 
