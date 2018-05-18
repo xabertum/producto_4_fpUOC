@@ -19,67 +19,86 @@
     <!-- CDN's -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-beta.1/inline/ckeditor.js"></script>
+    
+    <script src="../ckeditor/ckeditor.js"></script>
 
 </head>
 
 <body>
 
-    	<!-- NAVBAR -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<div class="container">
-			<a class="navbar-brand" href="#">World News</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarsExample07" aria-controls="navbarsExample07"
-				aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">World News</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-			<div class="collapse navbar-collapse">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active li-sign-in"><a class="nav-link"
-						href="sign-in.html"> <img class="icon-position"
-							src="img/ic_account_circle_white_48dp_1x.png" height="24px"
-							alt="Sign-In Icon"> <span id="sign-position">Sign-In</span>
-					</a></li>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active li-sign-in">
+                        <a class="nav-link" href="sign-in.html">
+                            <img class="icon-position" src="img/ic_account_circle_white_48dp_1x.png" height="24px" alt="Sign-In Icon">
+                            <span id="sign-position">Sign-In</span>
+                        </a>
+                    </li>
 
-					<li class="nav-item active li-wrapper li-color-1"><a
-						class="nav-link" href=""> <span>Home</span>
-					</a></li>
+                    <li class="nav-item active li-wrapper li-color-1">
+                        <a class="nav-link" href="">
+                            <span>Home</span>
+                        </a>
+                    </li>
 
-					<li class="nav-item active li-wrapper"><a class="nav-link"
-						href=""> <span>News</span>
-					</a></li>
+                    <li class="nav-item active li-wrapper">
+                        <a class="nav-link" href="">
+                            <span>News</span>
+                        </a>
+                    </li>
 
-					<li class="nav-item active li-wrapper"><a class="nav-link"
-						href=""> <span>Sports</span>
-					</a></li>
+                    <li class="nav-item active li-wrapper">
+                        <a class="nav-link" href="">
+                            <span>Sports</span>
+                        </a>
+                    </li>
 
-					<li class="nav-item active li-wrapper"><a class="nav-link"
-						href=""> <span>Weather</span>
-					</a></li>
+                    <li class="nav-item active li-wrapper">
+                        <a class="nav-link" href="">
+                            <span>Weather</span>
+                        </a>
+                    </li>
 
-					<li class="nav-item active li-wrapper"><a class="nav-link"
-						href=""> <span>Shop</span>
-					</a></li>
+                    <li class="nav-item active li-wrapper">
+                        <a class="nav-link" href="">
+                            <span>Shop</span>
+                        </a>
+                    </li>
 
-					<li class="nav-item active li-wrapper"><a class="nav-link"
-						href=""> <span>Earth</span>
-					</a></li>
+                    <li class="nav-item active li-wrapper">
+                        <a class="nav-link" href="">
+                            <span>Earth</span>
+                        </a>
+                    </li>
 
-					<li class="nav-item active li-wrapper"><a class="nav-link"
-						href=""> <span>Travel</span>
-					</a></li>
+                    <li class="nav-item active li-wrapper">
+                        <a class="nav-link" href="">
+                            <span>Travel</span>
+                        </a>
+                    </li>
 
-					<li class="nav-item active li-wrapper"><a class="nav-link"
-						href=""> <span>Capital</span>
-					</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+                    <li class="nav-item active li-wrapper">
+                        <a class="nav-link" href="">
+                            <span>Capital</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- NEWS -->
+
+    <form action="" id="news-form"></form>
 
     <div class="container">
         <div class="wrapper-news">
@@ -93,7 +112,7 @@
 
             <div>
                 <div class="container-news">
-                    <div id="editor1" class="">
+                    <div id="editor1" class="" contenteditable="true">
                         <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tristique nisl. Vestibulum cursus
                             ac mi sed dapibus. Curabitur consequat velit urna, nec euismod sem gravida ac. Sed consectetur
                             orci eu nisl lobortis, sed dapibus urna aliquet. Nam nec tellus sit amet ligula porttitor accumsan
@@ -105,10 +124,10 @@
                             Nullam vitae felis in magna finibus eleifend sit amet vitae tellus.
                         </p>
 
-                        <img class="img-fluid" src="img/pexels-photo-220201.jpeg" alt="photo news">
+                        <!-- <img class="img-fluid" src="img/pexels-photo-220201.jpeg" alt="photo news">-->
                     </div>
 
-                    <div id="editor2" class="">
+                    <div id="editor2" class=""  contenteditable="true">
                         <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tristique nisl. Vestibulum cursus
                             ac mi sed dapibus. Curabitur consequat velit urna, nec euismod sem gravida ac. Sed consectetur
                             orci eu nisl lobortis, sed dapibus urna aliquet. Nam nec tellus sit amet ligula porttitor accumsan
@@ -196,31 +215,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
-
-    <script>
-        InlineEditor
-            .create(document.querySelector('#editor0'))
-            .catch(error => {
-                console.error(error);
-            });
-    </script>
-
-
-    <script>
-        InlineEditor
-            .create(document.querySelector('#editor1'))
-            .catch(error => {
-                console.error(error);
-            });
-    </script>
-    <script>
-        InlineEditor
-            .create(document.querySelector('#editor2'))
-            .catch(error => {
-                console.error(error);
-            });
-    </script>
-
 
 </body>
 
