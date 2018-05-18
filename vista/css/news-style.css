@@ -14,3 +14,9 @@
     padding-left: 15px;
 }
 
+/**** INLINE PLUGIN ******/
+
+.cke_button_label.cke_button__inlinesave_label {
+    display: inline;
+}
+

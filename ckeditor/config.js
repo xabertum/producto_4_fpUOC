@@ -3,27 +3,57 @@
  * For licensing, see https://ckeditor.com/legal/ckeditor-oss-license
  */
 
-CKEDITOR.editorConfig = function( config ) {
+CKEDITOR.editorConfig = function (config) {
 	// Define changes to default configuration here.
 	// For complete reference see:
 	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
 
 	// The toolbar groups arrangement, optimized for two toolbar rows.
-	config.toolbarGroups = [
-		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
-		{ name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
-		{ name: 'links' },
-		{ name: 'insert' },
-		{ name: 'forms' },
-		{ name: 'tools' },
-		{ name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
-		{ name: 'others' },
+	config.toolbarGroups = [{
+			name: 'clipboard',
+			groups: ['clipboard', 'undo']
+		},
+		{
+			name: 'editing',
+			groups: ['find', 'selection', 'spellchecker']
+		},
+		{
+			name: 'links'
+		},
+		{
+			name: 'insert'
+		},
+		{
+			name: 'forms'
+		},
+		{
+			name: 'tools'
+		},
+		{
+			name: 'document',
+			groups: ['mode', 'document', 'doctools']
+		},
+		{
+			name: 'others'
+		},
 		'/',
-		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-		{ name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
-		{ name: 'styles' },
-		{ name: 'colors' },
-		{ name: 'about' }
+		{
+			name: 'basicstyles',
+			groups: ['basicstyles', 'cleanup']
+		},
+		{
+			name: 'paragraph',
+			groups: ['list', 'indent', 'blocks', 'align', 'bidi']
+		},
+		{
+			name: 'styles'
+		},
+		{
+			name: 'colors'
+		},
+		{
+			name: 'about'
+		}
 	];
 
 	// Remove some buttons provided by the standard plugins, which are
@@ -35,5 +65,26 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
-    config.extraPlugins = 'inlinesave';
+	config.extraPlugins = 'inlinesave';
+
+	config.inlinesave = {
+		postUrl: '/myurl',
+		postData: {
+			test: true
+		},
+		onSave: function (editor) {
+			console.log('clicked save', editor);
+			return true;
+		},
+		onSuccess: function (editor, data) {
+			console.log('save successful', editor, data);
+		},
+		onFailure: function (editor, status, request) {
+			console.log('save failed', editor, status, request);
+		},
+		successMessage: 'Yay we saved it!',
+		errorMessage: 'Something went wrong :(',
+		useJSON: false,
+		useColorIcon: true
+	};
 };
