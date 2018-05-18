@@ -16,8 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         if (UsuarioControlador::registrar($txtNombre, $txtUsername, $txtPassword, $txtRol)) {
 
-            var_dump($txtRol);
-
             $usuario = UsuarioControlador::getUser($txtUsuario, $txtPassword);
             $_SESSION["usuario"] = array(
                 "id" => $usuario->getId(),
