@@ -68,7 +68,7 @@ CKEDITOR.editorConfig = function (config) {
 	config.extraPlugins = 'inlinesave';
 
 	config.inlinesave = {
-		postUrl: '/myurl',
+		postUrl: 'ckeditor-save.php',
 		postData: {
 			test: true
 		},
