@@ -152,7 +152,7 @@
 	<div class="container latest-news">
 		<div class="row">
 			<div class="col-3">
-				<img class="img-fluid" src="img/pexels-photo-169677.jpeg" alt="">
+				<img class="img-fluid news-img-padding" src="img/pexels-photo-169677.jpeg" alt="">
 				<h3>Texto de prueba</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 				<img class="barra-news" src="img/barraNewsRoja.png" alt="">
@@ -160,7 +160,7 @@
 			</div>
 
 			<div class="col-3">
-				<img class="img-fluid" src="img/pexels-photo-315191.jpeg" alt="">
+				<img class="img-fluid news-img-padding" src="img/pexels-photo-315191.jpeg" alt="">
 				<h3>Texto de prueba</h3>
 				<p>Fusce vel ipsum porta, pellentesque nisl eget, lobortis nunc.</p>
 				<img class="barra-news" src="img/barraNewsRoja.png" alt="">
@@ -168,7 +168,7 @@
 			</div>
 
 			<div class="col-3">
-				<img class="img-fluid" src="img/pexels-photo-373965.jpeg" alt="">
+				<img class="img-fluid news-img-padding" src="img/pexels-photo-373965.jpeg" alt="">
 				<h3>Texto de prueba</h3>
 				<p>Fusce vel ipsum porta, pellentesque nisl eget, lobortis nunc.</p>
 				<img class="barra-news" src="img/barraNewsRoja.png" alt="">
@@ -176,7 +176,7 @@
 			</div>
 
 			<div class="col-3">
-				<img class="img-fluid" src="img/pexels-photo-459694.jpeg" alt="">
+				<img class="img-fluid news-img-padding" src="img/pexels-photo-459694.jpeg" alt="">
 				<h3>Texto de prueba</h3>
 				<p>Fusce vel ipsum porta, pellentesque nisl eget, lobortis nunc.</p>
 				<img class="barra-news" src="img/barraNewsRoja.png" alt="">
