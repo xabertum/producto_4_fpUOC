@@ -1,26 +1,26 @@
 <?php
 
-include_once '/datos/conexion.php';
+include_once '../datos/conexion.php';
 
-if (isset($_POST['editabledata'])) {
+$query = "INSERT INTO noticias_test (id, test) VALUES ('',:editabledata)";
 
-    $query = "INSERT INTO noticias_test (id, test) VALUES ('',:editabledata)";
+$cnx = Conexion::conectar();
 
-    self::getConexion();
+$resultado = $cnx->prepare($query);
 
-    $resultado = self::$cnx->prepare($query);
+$data = $_POST['editabledata'];
 
-    $data = $_POST['editabledata'];
+var_dump($data);
 
-    $resultado->bindParam(":editabledata", $data);
-    $resultado->execute();
+$resultado->bindParam(":editabledata", $data);
+$resultado->execute();
 
-    if ($resultado->execute()) {
-        return true;
-    } else {
+var_dump($resultado);
 
-        return false;
+if ($resultado->execute()) {
+    echo true;
+} else {
 
-    }
+    echo false;
 
 }
