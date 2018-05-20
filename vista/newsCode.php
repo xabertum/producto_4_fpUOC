@@ -1,3 +1,7 @@
 <?php
+include '../controlador/UsuarioControlador.php';
+include '../helps/helps.php';
 
-var_dump($GLOBALS);
+if ($_SERVER['REQUEST_METHOD'] === "POST") {
+    
+}
