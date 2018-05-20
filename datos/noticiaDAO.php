@@ -18,4 +18,17 @@ class NoticiaDAO extends Conexion
         self::$cnx = null;
     }
 
+
+    public static function saveNews ($noticia) {
+
+        $query = "INSERT INTO noticias_test (id, test) VALUES ('',:editabledata)";
+
+        self::getConexion();
+        $resultado = self::$cnx->prepare($query);
+        
+
+    }
+
+
+
 }
