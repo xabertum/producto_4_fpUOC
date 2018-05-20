@@ -69,9 +69,7 @@ CKEDITOR.editorConfig = function (config) {
 
 	config.inlinesave = {
 		postUrl: 'ckeditor-save.php',
-		postData: {
-			test: true
-		},
+		postData: '',
 		onSave: function (editor) {
 			console.log('clicked save', editor);
 			return true;

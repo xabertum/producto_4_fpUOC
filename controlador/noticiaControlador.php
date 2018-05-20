@@ -19,6 +19,8 @@ class NoticiaControlador
         $obj_noticia->setFecha_modificacion();
         $obj_noticia->setFecha_publicacion();
 
+        return NoticiaDAO::saveNews($obj_noticia);
+
     }
 
 }
