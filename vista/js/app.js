@@ -34,10 +34,12 @@ $(document).ready(function () {
 			}
 		});
 
-		return false
+		return false;
 
 	});
 
+
+	/******************************* */
 
 	$("#form-news").bind("submit", function () {
 
@@ -73,11 +75,8 @@ $(document).ready(function () {
 			}
 		});
 
-		return false
-
+		return false;
 
 	});
-
-
 
 });
