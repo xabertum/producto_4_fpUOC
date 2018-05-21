@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     "rol" => $usuario->getRol(),
                     "username" => $usuario->getUsername(),
                 );
-                header("location: admin.php");
+                header("location: periodista.php");
             }
         } else {header("location: register.html");}
     }
