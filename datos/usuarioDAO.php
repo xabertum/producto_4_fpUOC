@@ -78,7 +78,7 @@ class UsuarioDAO extends Conexion
         $filas = $resultado->fetch();
 
         $usuario = new Usuario();
-        //$usuario->setId($filas["id"]);
+        $usuario->setId($filas["id"]);
         $usuario->setNombre($filas["nombre"]);
         $usuario->setRol($filas["rol"]);
         $usuario->setUsername($filas["username"]);
@@ -111,9 +111,7 @@ class UsuarioDAO extends Conexion
         $resultado->bindParam(":username", $_username);
         $resultado->bindParam(":password", $_password);
         $resultado->bindParam(":rol", $_rol);
-
-        $resultado->execute();
-
+        
         if ($resultado->execute()) {
             return true;
         } else {
