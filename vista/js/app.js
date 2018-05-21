@@ -79,4 +79,19 @@ $(document).ready(function () {
 
 	});
 
+
+
+	/***********************************
+
+	$("#registerForm").bind("submit", function () {
+		if($("#password").attr('value') === $("#password2").attr('value')) {
+			window.location.href = "registerCode.php";
+		}
+		else {
+			alert ("¡Las contraseñas deben coincidir!")
+		} 
+
+	});
+
+*/
 });
