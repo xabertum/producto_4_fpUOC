@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     "username" => $usuario->getUsername(),
                 );
                 header("location: periodista.php");
+                
             }
         } else {header("location: register.html");}
     }

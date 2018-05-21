@@ -1,12 +1,7 @@
 <?php
 session_start();
 
-if ($_SESSION['usuario']['rol'] == 2) {} else {
-    header('location: admin.php');
-}
-
 ?>
-
 
 <!DOCTYPE html>
 <html>
