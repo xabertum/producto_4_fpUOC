@@ -1,25 +1,24 @@
 <?php
 
-include_once '../datos/noticiaDAO.php';
+include '../datos/noticiaDAO.php';
 
 class NoticiaControlador
 {
 
     public static function guardarNoticia($autor, $editor, $titulo, $subTitulo,
-        $texto, $imagen, $fechaCreacion, $fechaModificacion, $fechaPublicacion) {
+        $texto, $texto_2, $imagen) {
 
         $obj_noticia = new Noticia();
-        $obj_noticia->setAutor();
-        $obj_noticia->setEditor();
-        $obj_noticia->setTitulo();
-        $obj_noticia->setSubtitulo();
-        $obj_noticia->setTexto();
-        $obj_noticia->setImagen();
-        $obj_noticia->setFecha_creacion();
-        $obj_noticia->setFecha_modificacion();
-        $obj_noticia->setFecha_publicacion();
+        $obj_noticia->setAutor($autor);
+        $obj_noticia->setEditor($editor);
+        $obj_noticia->setTitulo($titulo);
+        $obj_noticia->setSubtitulo($subTitulo);
+        $obj_noticia->setTexto($texto);
+        $obj_noticia->setTexto_2($texto_2);
+        $obj_noticia->setImagen($imagen);
+       
 
-        return NoticiaDAO::saveNews($obj_noticia);
+        return NoticiaDAO::guardarNoticia($obj_noticia);
 
     }
 

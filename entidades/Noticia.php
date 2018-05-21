@@ -10,10 +10,14 @@ class Noticia {
     private $titulo;
     private $subtitulo;
     private $texto;
+    private $texto_2;
     private $imagen;
+    
+    /*
     private $fecha_creacion;
     private $fecha_modificacion;
     private $fecha_publicacion;
+    */
     
     //Getters & Setters
           
@@ -177,9 +181,23 @@ class Noticia {
         $this->fecha_publicacion = $fecha_publicacion;
     }
 
+    /**
+     * Get the value of texto_2
+     */ 
+    public function getTexto_2()
+    {
+        return $this->texto_2;
+    }
 
+    /**
+     * Set the value of texto_2
+     *
+     * @return  self
+     */ 
+    public function setTexto_2($texto_2)
+    {
+        $this->texto_2 = $texto_2;
 
-
-    
-
+        return $this;
+    }
 }
