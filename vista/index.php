@@ -2,11 +2,13 @@
 include '../datos/conexion.php';
 
 $cnx = Conexion::conectar();
-$query = "SELECT * FROM noticias";
+$query = "SELECT titulo, subtitulo FROM noticias";
 
 $resultado = $cnx->query($query);
 
+$noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
+var_dump ($noticias);
 
 
 ?>
@@ -101,8 +103,8 @@ $resultado = $cnx->query($query);
 						<img class="img-fluid" src="img/pexels-photo-92866.jpeg"
 							alt="latest news 1">
 						<div class="text-overlay">
-							<h2><?php echo $columna = $resultado->fetchColumn(3); ?></h2>
-							<p><?php echo $columna = $resultado->fetchColumn(4); ?></p>
+							<h2><?php echo $noticias[0]['titulo']; ?></h2>
+							<p><?php echo $noticias[0]['subtitulo']; ?></p>
 							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 							<p>EUROPE</p>
 						</div>
@@ -113,7 +115,7 @@ $resultado = $cnx->query($query);
 						<img class="img-fluid"
 							src="img/building-vintage-bike-monument.jpg" alt="latest news 2">
 						<div class="text-overlay">
-							<h4>Texto de prueba...</h4>
+							<h4><?php echo $noticias[1]['titulo'] ?></h4>
 							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 							<p>EUROPE</p>
 						</div>
