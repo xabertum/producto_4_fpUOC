@@ -1,7 +1,9 @@
 <?php
 
 include '/datos/conexion.php';
+$cnx = Conexion::conectar();
 
+$sql = "SELECT texto, texto_2 FROM noticias WHERE"
 
 ?>
 
@@ -160,6 +162,7 @@ include '/datos/conexion.php';
 
                     <p>
                         <input form="form-news" type="submit" value="Submit">
+                        <input type="hidden" name="id_news_1" form="form-news">
                     </p>
 
 
