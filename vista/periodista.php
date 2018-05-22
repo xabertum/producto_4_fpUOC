@@ -1,12 +1,7 @@
 <?php
 session_start();
 
-if ($_SESSION['usuario']['rol'] == 2) {} else {
-    header('location: admin.php');
-}
-
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -24,7 +19,6 @@ if ($_SESSION['usuario']['rol'] == 2) {} else {
 
 <!-- Custom CSS Stylesheets -->
 <link href="css/index-style.css" rel="stylesheet">
-
 
 </head>
 

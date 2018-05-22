@@ -1,27 +1,23 @@
-
 h4 {
     font-size: 1.3em;
 }
 
 .custom-container img {
-    -webkit-filter:brightness(0.6);
-    filter:brightness(0.6);
+    -webkit-filter: brightness(0.6);
+    filter: brightness(0.6);
 }
 
-.custom-container > *:hover {
-    -webkit-filter:brightness(1);
-    filter:brightness(1);
-    
+.custom-container>*:hover {
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
 }
-
 
 /******************************/
 
-.navbar > .container {
+.navbar>.container {
     height: 24px;
     font-size: 0.9em;
 }
-
 
 .li-sign-in {
     width: 15em;
@@ -52,14 +48,11 @@ h4 {
     border-left: 1px solid white;
     border-right: 1px solid white;
     width: 6.66em;
-    
-    
 }
 
 .li-wrapper a {
     border-top: 2px solid transparent;
     border-bottom: 4px solid transparent;
-    
 }
 
 .li-wrapper a span {
@@ -75,11 +68,9 @@ h4 {
     border-bottom: 4px solid blueviolet;
 }
 
-
 #date {
     position: absolute;
     margin-top: 2%;
-    
 }
 
 /***************************/
@@ -95,6 +86,10 @@ h4 {
 
 .latest-news-padding {
     padding-top: 1em;
+}
+
+.news-img-padding {
+    padding-bottom: 1em;
 }
 
 /***************************/
@@ -115,8 +110,6 @@ h4 {
     padding-right: 0.3em;
     padding-top: 0.3em;
 }
-
-
 
 /***************************/
 
@@ -140,12 +133,12 @@ h4 {
 
 .barra-news-moda {
     top: 5%;
-
 }
 
 .moda {
     padding-bottom: 20%;
 }
+
 .moda-txt {
     padding-top: 25%;
 }

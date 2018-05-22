@@ -1,4 +1,4 @@
-.news-text {
+textarea {
     text-align: justify;
     text-justify: inter-word;
 }
@@ -12,5 +12,11 @@
 
 .fecha {
     padding-left: 15px;
+}
+
+/**** INLINE SAVE CKEDITOR PLUGIN ******/
+
+.cke_button_label.cke_button__inlinesave_label {
+    display: inline;
 }
 

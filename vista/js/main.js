@@ -1,3 +1,6 @@
+/**
+ * Funcion que muestra la fecha actual
+ */
 function formatDate(date) {
     var monthNames = [
       "January", "February", "March",
@@ -16,13 +19,5 @@ function formatDate(date) {
 document.getElementById("date").innerHTML = formatDate(new Date);
 
 
-
-/**
- * 
- * 
- * 
- * 
- * 
- */
 
 
