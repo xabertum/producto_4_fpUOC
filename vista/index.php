@@ -1,5 +1,13 @@
 <?php
-include '/datos/conexion.php';
+include '../datos/conexion.php';
+
+$cnx = Conexion::conectar();
+$query = "SELECT * FROM noticias";
+
+$resultado = $cnx->query($query);
+
+
+
 
 ?>
 
@@ -93,8 +101,8 @@ include '/datos/conexion.php';
 						<img class="img-fluid" src="img/pexels-photo-92866.jpeg"
 							alt="latest news 1">
 						<div class="text-overlay">
-							<h2>Texto de prueba...</h2>
-							<p>Texto de prueba</p>
+							<h2><?php echo $columna = $resultado->fetchColumn(3); ?></h2>
+							<p><?php echo $columna = $resultado->fetchColumn(4); ?></p>
 							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 							<p>EUROPE</p>
 						</div>
