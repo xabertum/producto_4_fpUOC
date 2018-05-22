@@ -67,10 +67,6 @@ $(document).ready(function () {
 				}
 
 			},
-
-			 
-				
-
 			error: function (jqXHR, textStatus) {
 				alert( "Triggered fail callback: " + textStatus );
 			}
