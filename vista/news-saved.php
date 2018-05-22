@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +21,16 @@
     <link rel="stylesheet" href="css/news-style.css">
     <link rel="stylesheet" href="css/overhang.css">
 
+    <!-- CDN's -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/4.9.2/standard-all/ckeditor.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
+    <!-- CUSTOM SCRIPTS -->
+    <script src="js/overhang.js"></script>
+	<script src="js/app.js"></script>
 
 </head>
 
@@ -107,48 +120,46 @@
 
             <div>
 
-                <form action="newsCode.php" method="POST" id="form-news">
+                <form action="newsCode.php" method="POST" id="form-news"></form>
 
-                    <div class="container-news">
-                        <div class="">
-                            <textarea id="editor1" name="editor1" cols="45" rows="30" form="form-news" class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tristique nisl. Vestibulum cursus
-                                ac mi sed dapibus. Curabitur consequat velit urna, nec euismod sem gravida ac. Sed consectetur
-                                orci eu nisl lobortis, sed dapibus urna aliquet. Nam nec tellus sit amet ligula porttitor
-                                accumsan ut non ante. Proin tristique sem nec quam tincidunt ornare. Class aptent taciti
-                                sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec dictum libero
-                                et gravida egestas. Proin molestie orci eget quam aliquet vestibulum. Donec efficitur felis
-                                eu ultricies imperdiet. Quisque auctor nunc vitae felis hendrerit, eget pretium enim hendrerit.
-                                Aenean sapien ex, pellentesque in metus sed, faucibus varius orci. Nulla ornare quis nulla
-                                vitae ornare. Cras ac massa nibh. Nullam vitae felis in magna finibus eleifend sit amet vitae
-                                tellus.
-                            </textarea>
+                <div class="container-news">
+                    <div class="">
+                        <textarea id="editor1" name="editor1" cols="45" rows="30" form="form-news" class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tristique nisl. Vestibulum cursus
+                            ac mi sed dapibus. Curabitur consequat velit urna, nec euismod sem gravida ac. Sed consectetur
+                            orci eu nisl lobortis, sed dapibus urna aliquet. Nam nec tellus sit amet ligula porttitor accumsan
+                            ut non ante. Proin tristique sem nec quam tincidunt ornare. Class aptent taciti sociosqu ad litora
+                            torquent per conubia nostra, per inceptos himenaeos. Donec dictum libero et gravida egestas.
+                            Proin molestie orci eget quam aliquet vestibulum. Donec efficitur felis eu ultricies imperdiet.
+                            Quisque auctor nunc vitae felis hendrerit, eget pretium enim hendrerit. Aenean sapien ex, pellentesque
+                            in metus sed, faucibus varius orci. Nulla ornare quis nulla vitae ornare. Cras ac massa nibh.
+                            Nullam vitae felis in magna finibus eleifend sit amet vitae tellus.
+                        </textarea>
 
-                            <!-- <img class="img-fluid" src="img/pexels-photo-220201.jpeg" alt="photo news">-->
-                        </div>
+                        <!-- <img class="img-fluid" src="img/pexels-photo-220201.jpeg" alt="photo news">-->
+                    </div>
 
-                        <div class="">
-                            <textarea id="editor2" name="editor2" cols="45" rows="30" form="form-news" class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tristique nisl. Vestibulum cursus
-                                ac mi sed dapibus. Curabitur consequat velit urna, nec euismod sem gravida ac. Sed consectetur
-                                orci eu nisl lobortis, sed dapibus urna aliquet. Nam nec tellus sit amet ligula porttitor
-                                accumsan ut non ante. Proin tristique sem nec quam tincidunt ornare. Class aptent taciti
-                                sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec dictum libero
-                                et gravida egestas. Proin molestie orci eget quam aliquet vestibulum. Donec efficitur felis
-                                eu ultricies imperdiet. Quisque auctor nunc vitae felis hendrerit, eget pretium enim hendrerit.
-                                Aenean sapien ex, pellentesque in metus sed, faucibus varius orci. Nulla ornare quis nulla
-                                vitae ornare. Cras ac massa nibh. Nullam vitae felis in magna finibus eleifend sit amet vitae
-                                tellus.
-                            </textarea>
-                        </div>
+                    <div class="">
+                        <textarea id="editor2" name="editor2" cols="45" rows="30" form="form-news" class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tristique nisl. Vestibulum cursus
+                            ac mi sed dapibus. Curabitur consequat velit urna, nec euismod sem gravida ac. Sed consectetur
+                            orci eu nisl lobortis, sed dapibus urna aliquet. Nam nec tellus sit amet ligula porttitor accumsan
+                            ut non ante. Proin tristique sem nec quam tincidunt ornare. Class aptent taciti sociosqu ad litora
+                            torquent per conubia nostra, per inceptos himenaeos. Donec dictum libero et gravida egestas.
+                            Proin molestie orci eget quam aliquet vestibulum. Donec efficitur felis eu ultricies imperdiet.
+                            Quisque auctor nunc vitae felis hendrerit, eget pretium enim hendrerit. Aenean sapien ex, pellentesque
+                            in metus sed, faucibus varius orci. Nulla ornare quis nulla vitae ornare. Cras ac massa nibh.
+                            Nullam vitae felis in magna finibus eleifend sit amet vitae tellus.
+                        </textarea>
+                    </div>
 
-                        <div>
-                            <img class="img-fluid" src="img/earth-earth-at-night-night-lights-41949.jpeg" alt="">
-                        </div>
+                    <div>
+                        <img class="img-fluid" src="img/earth-earth-at-night-night-lights-41949.jpeg" alt="">
+                    </div>
 
-                        <p>
-                            <input form="form-news" type="submit" value="Submit">
-                        </p>
+                    <p>
+                        <input form="form-news" type="submit" value="Submit">
+                    </p>
 
-                </form>
+
                 </div>
             </div>
         </div>
@@ -208,20 +219,10 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-    <!-- CDN's -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.ckeditor.com/4.9.2/standard-all/ckeditor.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-
-    <!-- CUSTOM SCRIPTS -->
-    <script src="js/overhang.js"></script>
-    <script src="js/app.js"></script>
-
     <script src="js/bootstrap.min.js"></script>
     <script>
         CKEDITOR.inline('editor1');

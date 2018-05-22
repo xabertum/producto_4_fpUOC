@@ -35,5 +35,5 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 $resultado = array(
     "estado" => "false"
 );
-return print(json_encode($resultado)); 
+return print(json_encode($resultado));
 
