@@ -1,5 +1,8 @@
 <?php
 
+include '/datos/conexion.php';
+
+
 ?>
 
 <!DOCTYPE html>

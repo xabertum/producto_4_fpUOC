@@ -26,8 +26,6 @@ class NoticiaDAO extends Conexion
         self::getConexion();
         $resultado = self::$cnx->prepare($query);
 
-        var_dump($noticia);
-
         $_autor = $noticia->getAutor();
         $_editor = $noticia->getEditor();
         $_titulo = $noticia->getTitulo();
