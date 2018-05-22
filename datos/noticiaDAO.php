@@ -43,14 +43,6 @@ class NoticiaDAO extends Conexion
         $resultado->bindParam(":texto", $_texto);
         $resultado->bindParam(":texto_2", $_texto2);
         $resultado->bindParam(":imagen", $_imagen);
-        
-        /*
-        $resultado->bindParam(":fechacreacion", $_fechaCreacion);
-        $resultado->bindParam(":fechamodificacion", $_fechaModificacion);
-        $resultado->bindParam(":fechapublicacion", $_fechaPublicacion);
-         */
-        var_dump($resultado->execute());
-        print $resultado->errorCode();
 
         if ($resultado->execute()) {
             return true;

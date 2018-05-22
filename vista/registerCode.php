@@ -14,21 +14,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $txtPassword2 = validar_campo($_POST['password2']);
         $txtRol = 2;
 
-        if ($txtPassword === $txtPassword2) {
+        if ($txtPassword == $txtPassword2) {
 
             if (UsuarioControlador::registrar($txtNombre, $txtUsername, $txtPassword, $txtRol)) {
-                
-                $usuario = UsuarioControlador::getUser($txtUsuario, $txtPassword);
+
+                $usuario = UsuarioControlador::getUser($txtUsername, $txtPassword);
                 $_SESSION["usuario"] = array(
                     "id" => $usuario->getId(),
                     "nombre" => $usuario->getNombre(),
                     "rol" => $usuario->getRol(),
                     "username" => $usuario->getUsername(),
                 );
+
                 header("location: periodista.php");
-                
             }
         } else {header("location: register.html");}
     }
 }
-

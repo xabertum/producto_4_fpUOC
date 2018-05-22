@@ -26,9 +26,14 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         );
 
         if (NoticiaControlador::guardarNoticia($autor, $editor, $titulo, $subtitulo,
-            $texto, $texto2, $imagen, $fechaCreacion, $fechaModificacion, $fechaPublicacion));{
+            $texto, $texto2, $imagen));{
 
             return print(json_encode($resultado));
         }
     }
 }
+$resultado = array(
+    "estado" => "false"
+);
+return print(json_encode($resultado)); 
+

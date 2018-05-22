@@ -20,7 +20,6 @@ session_start();
 <!-- Custom CSS Stylesheets -->
 <link href="css/index-style.css" rel="stylesheet">
 
-
 </head>
 
 <body>
