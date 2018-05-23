@@ -218,10 +218,8 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 			<div class="row">
 				<div class="col-6">
 					<img class="img-fluid news-img-padding" src="img/pexels-photo-704623.jpeg" alt="">
-					<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-					<p>Nulla pretium a erat ut pulvinar. Suspendisse urna risus,
-						convallis at neque sit amet, tempor dictum nisi. Maecenas ac
-						cursus ante.</p>
+					<h4><?php echo $noticias[9]['titulo'] ?></h4>
+					<p><?php echo $noticias[9]['subtitulo'] ?></p>
 				</div>
 
 				<div class="col-3">
@@ -232,15 +230,13 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
 				<div class="col-3">
 					<div class="moda">
-						<h4>Sed neque risus.</h4>
-						<p>Nulla pretium a erat ut pulvinar. Suspendisse urna risus,
-							convallis at.</p>
+						<h4><?php echo $noticias[10]['titulo'] ?></h4>
+						<p><?php echo $noticias[10]['subtitulo'] ?></p>
 					</div>
 
 					<div class="moda-txt">
-						<h4>Sed neque risus.</h4>
-						<p>Nulla pretium a erat ut pulvinar. Suspendisse urna risus,
-							convallis at.</p>
+						<h4><?php echo $noticias[11]['titulo'] ?></h4>
+						<p><?php echo $noticias[11]['subtitulo'] ?></p>
 					</div>
 				</div>
 			</div>
