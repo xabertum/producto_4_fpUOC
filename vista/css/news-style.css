@@ -14,6 +14,15 @@ textarea {
     padding-left: 15px;
 }
 
+#titulo {
+    padding-top: 3%;
+}
+
+.news-text {
+    text-align: justify;
+    padding-top: 5%;
+}
+
 /**** INLINE SAVE CKEDITOR PLUGIN ******/
 
 .cke_button_label.cke_button__inlinesave_label {

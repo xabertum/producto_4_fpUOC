@@ -2,7 +2,7 @@
 include '../datos/conexion.php';
 
 $cnx = Conexion::conectar();
-$query = "SELECT titulo, subtitulo FROM noticias";
+$query = "SELECT id, titulo, subtitulo FROM noticias";
 
 $resultado = $cnx->query($query);
 
@@ -14,7 +14,7 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 <html>
 
 <head>
-<meta charset="utf-16" />
+<meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>World News - Homepage</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -97,55 +97,65 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="custom-container">
-						<img class="img-fluid" src="img/pexels-photo-92866.jpeg"
-							alt="latest news 1">
-						<div class="text-overlay">
-							<h2><?php echo $noticias[0]['titulo']; ?></h2>
-							<p><?php echo $noticias[0]['subtitulo']; ?></p>
-							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-							<p>LATIN AMERICA & CARIBBEAN</p>
-						</div>
+						<a href="news-index.php?nid=<?php echo $noticias[0]['id']; ?>">
+							<img class="img-fluid" src="img/pexels-photo-92866.jpeg"
+								alt="latest news 1">
+							<div class="text-overlay">
+								<h2><?php echo $noticias[0]['titulo']; ?></h2>
+								<p><?php echo $noticias[0]['subtitulo']; ?></p>
+								<img class="barra-news" src="img/barraNewsRoja.png" alt="">
+								<p>LATIN AMERICA & CARIBBEAN</p>
+							</div>
+						</a>
 					</div>
 				</div>
 				<div class="col-sm-3">
 					<div class="custom-container">
-						<img class="img-fluid"
-							src="img/building-vintage-bike-monument.jpg" alt="latest news 2">
-						<div class="text-overlay">
-							<h5><?php echo $noticias[1]['titulo'] ?></h5>
-							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-							<p>UK</p>
-						</div>
+						<a href="news-index.php?nid=<?php echo $noticias[1]['id']; ?>">
+							<img class="img-fluid"
+								src="img/building-vintage-bike-monument.jpg" alt="latest news 2">
+							<div class="text-overlay">
+								<h5><?php echo $noticias[1]['titulo'] ?></h5>
+								<img class="barra-news" src="img/barraNewsRoja.png" alt="">
+								<p>UK</p>
+							</div>
+						</a>
 					</div>
 
 					<div class="custom-container">
-						<img class="latest-news-padding img-fluid"
-							src="img/pexels-photo-396143.jpeg" alt="latest news 2">
-						<div class="text-overlay">
-							<h4><?php echo $noticias[2]['titulo'] ?></h4>
-							<img class="barra-news" src="img/barraNewsAzul.png" alt="">
-							<p>ASIA</p>
-						</div>
+						<a href="news-index.php?nid=<?php echo $noticias[2]['id']; ?>">
+							<img class="latest-news-padding img-fluid"
+								src="img/pexels-photo-396143.jpeg" alt="latest news 2">
+							<div class="text-overlay">
+								<h4><?php echo $noticias[2]['titulo'] ?></h4>
+								<img class="barra-news" src="img/barraNewsAzul.png" alt="">
+								<p>ASIA</p>
+							</div>
+						</a>
 					</div>
 				</div>
 				<div class="col-sm-3">
 					<div class="custom-container">
-						<img class="img-fluid" src="img/pexels-photo-808908.jpeg"
-							alt="latest news 2">
-						<div class="text-overlay">
-							<h4><?php echo $noticias[4]['titulo'] ?></h4>
-							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-							<p>EUROPE</p>
-						</div>
+						<a href="news-index.php?nid=<?php echo $noticias[4]['id']; ?>">
+							<img class="img-fluid" src="img/pexels-photo-808908.jpeg"
+								alt="latest news 2">
+							<div class="text-overlay">
+								<h4><?php echo $noticias[4]['titulo'] ?></h4>
+								<img class="barra-news" src="img/barraNewsRoja.png" alt="">
+								<p>EUROPE</p>
+							</div>
+						</a>
 					</div>
 					<div class="custom-container">
-						<img class="latest-news-padding img-fluid"
-							src="img/pexels-photo-10467.jpeg" alt="latest news 2">
-						<div class="text-overlay">
-							<h4><?php echo $noticias[3]['titulo'] ?></h4>
-							<img class="barra-news" src="img/barraNewsVerde.png" alt="">
-							<p>EARTH</p>
-						</div>
+						<a href="news-index.php?nid=<?php echo $noticias[3]['id']; ?>">
+							<img class="latest-news-padding img-fluid"
+								src="img/pexels-photo-10467.jpeg" alt="latest news 2">
+							<div class="text-overlay">
+								<h4><?php echo $noticias[3]['titulo'] ?></h4>
+								<img class="barra-news" src="img/barraNewsVerde.png" alt="">
+								<p>EARTH</p>
+							</div>
+						<a/>
 					</div>
 				</div>
 			</div>
