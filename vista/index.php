@@ -146,8 +146,8 @@ var_dump ($noticias);
 							src="img/pexels-photo-10467.jpeg" alt="latest news 2">
 						<div class="text-overlay">
 							<h4><?php echo $noticias[3]['titulo'] ?></h4>
-							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-							<p>EUROPE</p>
+							<img class="barra-news" src="img/barraNewsVerde.png" alt="">
+							<p>EARTH</p>
 						</div>
 					</div>
 				</div>
