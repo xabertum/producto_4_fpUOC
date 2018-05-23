@@ -106,7 +106,7 @@ var_dump ($noticias);
 							<h2><?php echo $noticias[0]['titulo']; ?></h2>
 							<p><?php echo $noticias[0]['subtitulo']; ?></p>
 							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-							<p>EUROPE</p>
+							<p>LATIN AMERICA & CARIBBEAN</p>
 						</div>
 					</div>
 				</div>
