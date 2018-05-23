@@ -2,9 +2,9 @@
 include '../datos/conexion.php';
 
 $cnx = Conexion::conectar();
-$id = $_GET['nid'];
+$id_news = $_GET['nid'];
 
-$query = "SELECT * FROM noticias WHERE id = '$id'";
+$query = "SELECT * FROM noticias WHERE id = '$id_news'";
 
 $resultado = $cnx->query($query);
 
