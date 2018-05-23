@@ -8,16 +8,13 @@ $resultado = $cnx->query($query);
 
 $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
-var_dump ($noticias);
-
-
 ?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-16" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>World News - Homepage</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -117,7 +114,7 @@ var_dump ($noticias);
 						<div class="text-overlay">
 							<h5><?php echo $noticias[1]['titulo'] ?></h5>
 							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-							<p>EUROPE</p>
+							<p>UK</p>
 						</div>
 					</div>
 
@@ -126,8 +123,8 @@ var_dump ($noticias);
 							src="img/pexels-photo-396143.jpeg" alt="latest news 2">
 						<div class="text-overlay">
 							<h4><?php echo $noticias[2]['titulo'] ?></h4>
-							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-							<p>EUROPE</p>
+							<img class="barra-news" src="img/barraNewsAzul.png" alt="">
+							<p>ASIA</p>
 						</div>
 					</div>
 				</div>
@@ -167,32 +164,32 @@ var_dump ($noticias);
 		<div class="row">
 			<div class="col-3">
 				<img class="img-fluid news-img-padding" src="img/pexels-photo-169677.jpeg" alt="">
-				<h3>Texto de prueba</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<h3><?php echo $noticias[5]['titulo'] ?></h3>
+				<p><?php echo $noticias[5]['subtitulo'] ?></p>
 				<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 				<p>EUROPE</p>
 			</div>
 
 			<div class="col-3">
 				<img class="img-fluid news-img-padding" src="img/pexels-photo-315191.jpeg" alt="">
-				<h3>Texto de prueba</h3>
-				<p>Fusce vel ipsum porta, pellentesque nisl eget, lobortis nunc.</p>
+				<h3><?php echo $noticias[6]['titulo'] ?></h3>
+				<p><?php echo $noticias[6]['subtitulo'] ?></p>
 				<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 				<p>EUROPE</p>
 			</div>
 
 			<div class="col-3">
 				<img class="img-fluid news-img-padding" src="img/pexels-photo-373965.jpeg" alt="">
-				<h3>Texto de prueba</h3>
-				<p>Fusce vel ipsum porta, pellentesque nisl eget, lobortis nunc.</p>
+				<h3><?php echo $noticias[8]['titulo'] ?></h3>
+				<p><?php echo $noticias[8]['subtitulo'] ?></p>
 				<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 				<p>EUROPE</p>
 			</div>
 
 			<div class="col-3">
 				<img class="img-fluid news-img-padding" src="img/pexels-photo-459694.jpeg" alt="">
-				<h3>Texto de prueba</h3>
-				<p>Fusce vel ipsum porta, pellentesque nisl eget, lobortis nunc.</p>
+				<h3><?php echo $noticias[7]['titulo'] ?></h3>
+				<p><?php echo $noticias[7]['subtitulo'] ?></p>
 				<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 				<p>EUROPE</p>
 			</div>
@@ -202,7 +199,7 @@ var_dump ($noticias);
 	<!-- OTHER NEWS -->
 	<div class="container-fluid latest-news latest-bg">
 		<div class="container">
-			<div class="row">
+			<div class="row news-img-padding">
 				<div class="col-6">
 					<img class="barra-news" src="img/barraNewsAmarillo.png" height="33"
 						alt="">
@@ -220,7 +217,7 @@ var_dump ($noticias);
 		<div class="container ">
 			<div class="row">
 				<div class="col-6">
-					<img class="img-fluid" src="img/pexels-photo-704623.jpeg" alt="">
+					<img class="img-fluid news-img-padding" src="img/pexels-photo-704623.jpeg" alt="">
 					<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
 					<p>Nulla pretium a erat ut pulvinar. Suspendisse urna risus,
 						convallis at neque sit amet, tempor dictum nisi. Maecenas ac
