@@ -115,7 +115,7 @@ var_dump ($noticias);
 						<img class="img-fluid"
 							src="img/building-vintage-bike-monument.jpg" alt="latest news 2">
 						<div class="text-overlay">
-							<h4><?php echo $noticias[1]['titulo'] ?></h4>
+							<h5><?php echo $noticias[1]['titulo'] ?></h5>
 							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 							<p>EUROPE</p>
 						</div>
@@ -125,7 +125,7 @@ var_dump ($noticias);
 						<img class="latest-news-padding img-fluid"
 							src="img/pexels-photo-396143.jpeg" alt="latest news 2">
 						<div class="text-overlay">
-							<h4>Texto de prueba...</h4>
+							<h4><?php echo $noticias[2]['titulo'] ?></h4>
 							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 							<p>EUROPE</p>
 						</div>
@@ -136,7 +136,7 @@ var_dump ($noticias);
 						<img class="img-fluid" src="img/pexels-photo-808908.jpeg"
 							alt="latest news 2">
 						<div class="text-overlay">
-							<h4>Texto de prueba...</h4>
+							<h4><?php echo $noticias[4]['titulo'] ?></h4>
 							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 							<p>EUROPE</p>
 						</div>
@@ -145,7 +145,7 @@ var_dump ($noticias);
 						<img class="latest-news-padding img-fluid"
 							src="img/pexels-photo-10467.jpeg" alt="latest news 2">
 						<div class="text-overlay">
-							<h4>Texto de prueba...</h4>
+							<h4><?php echo $noticias[3]['titulo'] ?></h4>
 							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 							<p>EUROPE</p>
 						</div>
