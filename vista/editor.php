@@ -1,4 +1,13 @@
 <?php
+include '../datos/conexion.php';
+
+$cnx = Conexion::conectar();
+$query = "SELECT titulo, subtitulo FROM noticias";
+
+$resultado = $cnx->query($query);
+
+$noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
+
 session_start();
 
 if ($_SESSION['usuario']['rol'] == 1) {
@@ -103,10 +112,10 @@ if ($_SESSION['usuario']['rol'] == 1) {
 						<img class="img-fluid" src="img/pexels-photo-92866.jpeg"
 							alt="latest news 1">
 						<div class="text-overlay">
-							<h2>Texto de prueba...</h2>
-							<p>Texto de prueba</p>
+							<h2><?php echo $noticias[0]['titulo']; ?></h2>
+							<p><?php echo $noticias[0]['subtitulo']; ?></p>
 							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-							<p>EUROPE</p>
+							<p>LATIN AMERICA & CARIBBEAN</p>
 						</div>
 					</div>
 				</div>
@@ -115,9 +124,9 @@ if ($_SESSION['usuario']['rol'] == 1) {
 						<img class="img-fluid"
 							src="img/building-vintage-bike-monument.jpg" alt="latest news 2">
 						<div class="text-overlay">
-							<h4>Texto de prueba...</h4>
+							<h5><?php echo $noticias[1]['titulo'] ?></h5>
 							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-							<p>EUROPE</p>
+							<p>UK</p>
 						</div>
 					</div>
 
@@ -125,9 +134,9 @@ if ($_SESSION['usuario']['rol'] == 1) {
 						<img class="latest-news-padding img-fluid"
 							src="img/pexels-photo-396143.jpeg" alt="latest news 2">
 						<div class="text-overlay">
-							<h4>Texto de prueba...</h4>
-							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-							<p>EUROPE</p>
+							<h4><?php echo $noticias[2]['titulo'] ?></h4>
+							<img class="barra-news" src="img/barraNewsAzul.png" alt="">
+							<p>ASIA</p>
 						</div>
 					</div>
 				</div>
@@ -136,7 +145,7 @@ if ($_SESSION['usuario']['rol'] == 1) {
 						<img class="img-fluid" src="img/pexels-photo-808908.jpeg"
 							alt="latest news 2">
 						<div class="text-overlay">
-							<h4>Texto de prueba...</h4>
+							<h4><?php echo $noticias[4]['titulo'] ?></h4>
 							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 							<p>EUROPE</p>
 						</div>
@@ -145,9 +154,9 @@ if ($_SESSION['usuario']['rol'] == 1) {
 						<img class="latest-news-padding img-fluid"
 							src="img/pexels-photo-10467.jpeg" alt="latest news 2">
 						<div class="text-overlay">
-							<h4>Texto de prueba...</h4>
-							<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-							<p>EUROPE</p>
+							<h4><?php echo $noticias[3]['titulo'] ?></h4>
+							<img class="barra-news" src="img/barraNewsVerde.png" alt="">
+							<p>EARTH</p>
 						</div>
 					</div>
 				</div>
@@ -166,33 +175,33 @@ if ($_SESSION['usuario']['rol'] == 1) {
 	<div class="container latest-news">
 		<div class="row">
 			<div class="col-3">
-				<img class="img-fluid" src="img/pexels-photo-169677.jpeg" alt="">
-				<h3>Texto de prueba</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<img class="img-fluid news-img-padding" src="img/pexels-photo-169677.jpeg" alt="">
+				<h3><?php echo $noticias[5]['titulo'] ?></h3>
+				<p><?php echo $noticias[5]['subtitulo'] ?></p>
 				<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 				<p>EUROPE</p>
 			</div>
 
 			<div class="col-3">
-				<img class="img-fluid" src="img/pexels-photo-315191.jpeg" alt="">
-				<h3>Texto de prueba</h3>
-				<p>Fusce vel ipsum porta, pellentesque nisl eget, lobortis nunc.</p>
+				<img class="img-fluid news-img-padding" src="img/pexels-photo-315191.jpeg" alt="">
+				<h3><?php echo $noticias[6]['titulo'] ?></h3>
+				<p><?php echo $noticias[6]['subtitulo'] ?></p>
 				<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 				<p>EUROPE</p>
 			</div>
 
 			<div class="col-3">
-				<img class="img-fluid" src="img/pexels-photo-373965.jpeg" alt="">
-				<h3>Texto de prueba</h3>
-				<p>Fusce vel ipsum porta, pellentesque nisl eget, lobortis nunc.</p>
+				<img class="img-fluid news-img-padding" src="img/pexels-photo-373965.jpeg" alt="">
+				<h3><?php echo $noticias[8]['titulo'] ?></h3>
+				<p><?php echo $noticias[8]['subtitulo'] ?></p>
 				<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 				<p>EUROPE</p>
 			</div>
 
 			<div class="col-3">
-				<img class="img-fluid" src="img/pexels-photo-459694.jpeg" alt="">
-				<h3>Texto de prueba</h3>
-				<p>Fusce vel ipsum porta, pellentesque nisl eget, lobortis nunc.</p>
+				<img class="img-fluid news-img-padding" src="img/pexels-photo-459694.jpeg" alt="">
+				<h3><?php echo $noticias[7]['titulo'] ?></h3>
+				<p><?php echo $noticias[7]['subtitulo'] ?></p>
 				<img class="barra-news" src="img/barraNewsRoja.png" alt="">
 				<p>EUROPE</p>
 			</div>
@@ -202,7 +211,7 @@ if ($_SESSION['usuario']['rol'] == 1) {
 	<!-- OTHER NEWS -->
 	<div class="container-fluid latest-news latest-bg">
 		<div class="container">
-			<div class="row">
+			<div class="row news-img-padding">
 				<div class="col-6">
 					<img class="barra-news" src="img/barraNewsAmarillo.png" height="33"
 						alt="">
@@ -220,11 +229,9 @@ if ($_SESSION['usuario']['rol'] == 1) {
 		<div class="container ">
 			<div class="row">
 				<div class="col-6">
-					<img class="img-fluid" src="img/pexels-photo-704623.jpeg" alt="">
-					<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-					<p>Nulla pretium a erat ut pulvinar. Suspendisse urna risus,
-						convallis at neque sit amet, tempor dictum nisi. Maecenas ac
-						cursus ante.</p>
+					<img class="img-fluid news-img-padding" src="img/pexels-photo-704623.jpeg" alt="">
+					<h4><?php echo $noticias[9]['titulo'] ?></h4>
+					<p><?php echo $noticias[9]['subtitulo'] ?></p>
 				</div>
 
 				<div class="col-3">
@@ -235,15 +242,13 @@ if ($_SESSION['usuario']['rol'] == 1) {
 
 				<div class="col-3">
 					<div class="moda">
-						<h4>Sed neque risus.</h4>
-						<p>Nulla pretium a erat ut pulvinar. Suspendisse urna risus,
-							convallis at.</p>
+						<h4><?php echo $noticias[10]['titulo'] ?></h4>
+						<p><?php echo $noticias[10]['subtitulo'] ?></p>
 					</div>
 
 					<div class="moda-txt">
-						<h4>Sed neque risus.</h4>
-						<p>Nulla pretium a erat ut pulvinar. Suspendisse urna risus,
-							convallis at.</p>
+						<h4><?php echo $noticias[11]['titulo'] ?></h4>
+						<p><?php echo $noticias[11]['subtitulo'] ?></p>
 					</div>
 				</div>
 			</div>
