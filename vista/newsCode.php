@@ -17,10 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $texto = $_POST['editor1'];
         $texto2 = $_POST['editor2'];
         $imagen = "";
-        $fechaCreacion = "";
-        $fechaModificacion = "";
-        $fechaPublicacion = "";
-
+        
         $resultado = array(
             "estado" => "true",
         );

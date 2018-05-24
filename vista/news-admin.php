@@ -11,8 +11,6 @@ $resultado = $cnx->query($query);
 
 $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
-
-
 ?>
 
     <!DOCTYPE html>
