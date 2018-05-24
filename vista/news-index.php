@@ -119,11 +119,11 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
                 <div>
                     <div class="container-news">
-                        <div class="">
+                        <div>
                             <p id="editor1" class="news-text"><?php echo $noticias[0]['texto'] ?></p>                            
                         </div>
 
-                        <div class="">
+                        <div>
                             <p id="editor2" class="news-text"><?php echo $noticias[0]['texto_2'] ?></p>
                         </div>
 
