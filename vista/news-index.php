@@ -110,17 +110,20 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
             <div class="wrapper-news">
                 <header>
                     <h2 id="titulo"><?php echo $noticias[0]['titulo'] ?></h2>
-                    <h4><?php echo $noticias[0]['subtitulo']?></h4>
+                    <h4><?php echo $noticias[0]['subtitulo'] ?></h4>
                     <div class="fecha">
+                        <i class="fas fa-paragraph"></i>
+                        <span><?php echo $noticias[0]['autor'] ?></span>
+                        
                         <i class="fas fa-clock"></i>
-                        <span>June 2, 2017</span>
+                        <span><?php echo $noticias[0]['fecha']?></span>
                     </div>
                 </header>
 
                 <div>
                     <div class="container-news">
                         <div>
-                            <p id="editor1" class="news-text"><?php echo $noticias[0]['texto'] ?></p>                            
+                            <p id="editor1" class="news-text"><?php echo $noticias[0]['texto'] ?></p>
                         </div>
 
                         <div>
@@ -128,7 +131,7 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
                         </div>
 
                         <div>
-                            <img class="img-fluid" src="img/earth-earth-at-night-night-lights-41949.jpeg" alt="">
+                            <img class="img-fluid" src="<?php echo $noticias[0]['imagen']?>" alt="">
                         </div>
                     </div>
                 </div>
