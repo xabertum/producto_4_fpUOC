@@ -9,13 +9,21 @@ textarea {
     grid-template-rows: 50% 50%;
     grid-gap: 25px;
 }
-
-.fecha {
-    /*padding-left: 15px;*/
+header h4 {
+    width: 65%;
 }
 
 #titulo {
     padding-top: 3%;
+}
+
+header > div > span {
+    color: brown;
+    font-weight: 600;
+    padding-right: 2%;
+}
+.icon-color {
+    color: brown;
 }
 
 .news-text {

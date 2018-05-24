@@ -112,10 +112,10 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
                     <h2 id="titulo"><?php echo $noticias[0]['titulo'] ?></h2>
                     <h4><?php echo $noticias[0]['subtitulo'] ?></h4>
                     <div class="fecha">
-                        <i class="fas fa-paragraph"></i>
+                        <i class="fas fa-paragraph icon-color"></i>
                         <span><?php echo $noticias[0]['autor'] ?></span>
                         
-                        <i class="fas fa-clock"></i>
+                        <i class="fas fa-clock icon-color"></i>
                         <span><?php echo $noticias[0]['fecha']?></span>
                     </div>
                 </header>
