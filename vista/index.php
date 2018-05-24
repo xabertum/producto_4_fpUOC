@@ -178,8 +178,9 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 					<h3><?php echo $noticias[5]['titulo'] ?></h3>
 					<p><?php echo $noticias[5]['subtitulo'] ?></p>
 					<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-					<p>EUROPE</p>
 				</a>
+				<p>EUROPE</p>
+				
 			</div>
 
 			<div class="col-3">
@@ -188,8 +189,8 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 					<h3><?php echo $noticias[6]['titulo'] ?></h3>
 					<p><?php echo $noticias[6]['subtitulo'] ?></p>
 					<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-					<p>EUROPE</p>
 				</a>
+				<p>EUROPE</p>
 			</div>
 
 			<div class="col-3">
@@ -198,8 +199,8 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 					<h3><?php echo $noticias[8]['titulo'] ?></h3>
 					<p><?php echo $noticias[8]['subtitulo'] ?></p>
 					<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-					<p>EUROPE</p>
 				</a>
+				<p>EUROPE</p>				
 			</div>
 
 			<div class="col-3">
@@ -208,8 +209,8 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 					<h3><?php echo $noticias[7]['titulo'] ?></h3>
 					<p><?php echo $noticias[7]['subtitulo'] ?></p>
 					<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-					<p>EUROPE</p>
 				</a>
+				<p>EUROPE</p>				
 			</div>
 		</div>
 	</div>
