@@ -51,7 +51,15 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
                         <li class="nav-item active li-sign-in">
                             <a class="nav-link" href="cerrar-sesion.php">
                                 <img class="icon-position" src="img/exit_delete_close_remove_door-48.png" height="24px" alt="Sign-In Icon">
-                                <span id="sign-position">Sign in</span>
+                                <span id="sign-position"><?php echo $_SESSION["usuario"]["nombre"] ?>
+                                / <?php 
+                                        if (isset($_SESSION['usuario'])) {
+                                        echo $_SESSION["usuario"]["rol"] == 0 ? 'Admin' : '';
+                                        echo $_SESSION["usuario"]["rol"] == 1 ? 'Editor' : '';
+                                        echo $_SESSION["usuario"]["rol"] == 2 ? 'Periodista':'';
+                                        }
+                                   ?>
+                                </span>
                             </a>
                         </li>
 

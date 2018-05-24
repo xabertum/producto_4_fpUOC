@@ -176,9 +176,10 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 				<a href="news-index.php?nid=<?php echo $noticias[5]['id']; ?>">
 					<img class="img-fluid news-img-padding" src="img/pexels-photo-169677.jpeg" alt="">
 					<h3><?php echo $noticias[5]['titulo'] ?></h3>
+				</a>
 					<p><?php echo $noticias[5]['subtitulo'] ?></p>
 					<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-				</a>
+				
 				<p>EUROPE</p>
 				
 			</div>
@@ -187,9 +188,10 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 				<a href="news-index.php?nid=<?php echo $noticias[6]['id']; ?>">
 					<img class="img-fluid news-img-padding" src="img/pexels-photo-315191.jpeg" alt="">
 					<h3><?php echo $noticias[6]['titulo'] ?></h3>
+				</a>
 					<p><?php echo $noticias[6]['subtitulo'] ?></p>
 					<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-				</a>
+				
 				<p>EUROPE</p>
 			</div>
 
@@ -197,9 +199,10 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 				<a href="news-index.php?nid=<?php echo $noticias[8]['id']; ?>">
 					<img class="img-fluid news-img-padding" src="img/pexels-photo-373965.jpeg" alt="">
 					<h3><?php echo $noticias[8]['titulo'] ?></h3>
+				</a>
 					<p><?php echo $noticias[8]['subtitulo'] ?></p>
 					<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-				</a>
+				
 				<p>EUROPE</p>				
 			</div>
 
@@ -207,9 +210,10 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 				<a href="news-index.php?nid=<?php echo $noticias[7]['id']; ?>">
 					<img class="img-fluid news-img-padding" src="img/pexels-photo-459694.jpeg" alt="">
 					<h3><?php echo $noticias[7]['titulo'] ?></h3>
+				</a>
 					<p><?php echo $noticias[7]['subtitulo'] ?></p>
 					<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-				</a>
+				
 				<p>EUROPE</p>				
 			</div>
 		</div>
@@ -236,25 +240,34 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 		<div class="container ">
 			<div class="row">
 				<div class="col-6">
+				<a href="news-index.php?nid=<?php echo $noticias[9]['id']; ?>">
 					<img class="img-fluid news-img-padding" src="img/pexels-photo-704623.jpeg" alt="">
-					<h4><?php echo $noticias[9]['titulo'] ?></h4>
+					<h4 class="color-black"><?php echo $noticias[9]['titulo'] ?></h4>
+				</a>
 					<p><?php echo $noticias[9]['subtitulo'] ?></p>
 				</div>
 
 				<div class="col-3">
-					<img class="img-fluid moda" height="200"
-						src="img/pexels-photo-715821.jpeg" alt=""> <img
-						class="img-fluid moda" src="img/pexels-photo-715836.jpeg" alt="">
+				<a href="news-index.php?nid=<?php echo $noticias[10]['id']; ?>">
+					<img class="img-fluid moda" height="200" src="img/pexels-photo-715821.jpeg" alt="">
+				</a>
+				<a href="news-index.php?nid=<?php echo $noticias[11]['id']; ?>">
+					<img class="img-fluid moda" src="img/pexels-photo-715836.jpeg" alt="">
+				</a>
 				</div>
 
 				<div class="col-3">
 					<div class="moda">
-						<h4><?php echo $noticias[10]['titulo'] ?></h4>
+						<a href="news-index.php?nid=<?php echo $noticias[10]['id']; ?>">
+							<h4><?php echo $noticias[10]['titulo'] ?></h4>
+						</a>
 						<p><?php echo $noticias[10]['subtitulo'] ?></p>
 					</div>
 
 					<div class="moda-txt">
-						<h4><?php echo $noticias[11]['titulo'] ?></h4>
+						<a href="news-index.php?nid=<?php echo $noticias[11]['id']; ?>">
+							<h4><?php echo $noticias[11]['titulo'] ?></h4>
+						</a>
 						<p><?php echo $noticias[11]['subtitulo'] ?></p>
 					</div>
 				</div>

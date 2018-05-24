@@ -3,6 +3,8 @@ textarea {
     text-justify: inter-word;
 }
 
+
+
 .container-news {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -29,6 +31,10 @@ header > div > span {
 .news-text {
     text-align: justify;
     padding-top: 5%;
+}
+
+.img-padding-top {
+    padding-top: 11%;
 }
 
 footer {

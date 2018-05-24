@@ -111,7 +111,9 @@ h4 {
     padding-right: 0.3em;
     padding-top: 0.3em;
 }
-
+.color-black {
+    color: black !important;
+}
 .col-3 a {
     color: black;
 }
