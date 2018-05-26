@@ -38,7 +38,7 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="index.php">World News</a>
+                <a class="navbar-brand" href="admin.php">World News</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -122,7 +122,7 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
                     <h4><?php echo $noticias[0]['subtitulo'] ?></h4>
                     <div class="fecha">
                         <i class="fas fa-paragraph icon-color"></i>
-                        <span><?php echo $noticias[0]['autor'] ?></span>
+                        <span>By <?php echo $noticias[0]['autor'] ?></span>
 
                         <i class="fas fa-clock icon-color"></i>
                         <span><?php echo $noticias[0]['fecha'] ?></span>

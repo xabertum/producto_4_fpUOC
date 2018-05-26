@@ -11,6 +11,11 @@ $resultado = $cnx->query($query);
 
 $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
+$_SESSION['noticias'] = $noticias;
+
+var_dump($_SESSION['noticias'][0]['id']);
+var_dump($_SESSION['usuario']);
+
 ?>
 
     <!DOCTYPE html>
@@ -38,7 +43,7 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="index.php">World News</a>
+                <a class="navbar-brand" href="editor.php">World News</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -122,7 +127,7 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
                     <h4><?php echo $noticias[0]['subtitulo'] ?></h4>
                     <div class="fecha">
                         <i class="fas fa-paragraph icon-color"></i>
-                        <span><?php echo $noticias[0]['autor'] ?></span>
+                        <span>By <?php echo $noticias[0]['autor'] ?></span>
 
                         <i class="fas fa-clock icon-color"></i>
                         <span><?php echo $noticias[0]['fecha'] ?></span>
@@ -132,11 +137,13 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
                 <div>
                     <div class="container-news">
                         <div>
-                            <p id="editor1" class="news-text"><?php echo $noticias[0]['texto'] ?></p>
-                        </div>
-
+                            <textarea id="editor1" name="editor1" cols="45" rows="30" class="news-text">
+                                <?php echo $noticias[0]['texto'] ?></p>
+                            </textarea>
+                        </div>                    
                         <div>
-                            <p id="editor2" class="news-text"><?php echo $noticias[0]['texto_2'] ?></p>
+                        <textarea id="editor2" name="editor2" cols="45" rows="30" class="news-text">
+                            <?php echo $noticias[0]['texto_2'] ?></textarea>
                         </div>
 
                         <div class="img-padding-top">
@@ -208,6 +215,12 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
         <script src="js/overhang.js"></script>
         <script src="js/app.js"></script>
         <script src="js/bootstrap.min.js"></script>
+
+        <!-- INSTANCIAS DE CKEDITOR -->                                
+        <script>
+            CKEDITOR.inline('editor1');
+            CKEDITOR.inline('editor2');
+        </script>
 
     </body>
 
