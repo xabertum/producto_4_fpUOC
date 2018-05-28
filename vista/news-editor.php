@@ -123,8 +123,16 @@ var_dump($_SESSION['usuario']);
         <div class="container">
             <div class="wrapper-news">
                 <header>
-                    <h2 id="titulo"><?php echo $noticias[0]['titulo'] ?></h2>
-                    <h4><?php echo $noticias[0]['subtitulo'] ?></h4>
+                    <div>
+                        <textarea id="editor-titulo" cols=90 rows=1>
+                            <h2><?php echo $noticias[0]['titulo'] ?></h2>
+                        </textarea>
+                    </div>
+                     <div>
+                        <textarea id="editor-subtitulo" cols=90 rows=1>
+                            <h4><?php echo $noticias[0]['subtitulo'] ?></h4>
+                        </textarea>
+                    </div>                                       
                     <div class="fecha">
                         <i class="fas fa-paragraph icon-color"></i>
                         <span>By <?php echo $noticias[0]['autor'] ?></span>
@@ -138,16 +146,19 @@ var_dump($_SESSION['usuario']);
                     <div class="container-news">
                         <div>
                             <textarea id="editor1" name="editor1" cols="45" rows="30" class="news-text">
-                                <?php echo $noticias[0]['texto'] ?></p>
+                                <?php echo $noticias[0]['texto'] ?>
                             </textarea>
                         </div>                    
                         <div>
-                        <textarea id="editor2" name="editor2" cols="45" rows="30" class="news-text">
-                            <?php echo $noticias[0]['texto_2'] ?></textarea>
+                            <textarea id="editor2" name="editor2" cols="45" rows="30" class="news-text">
+                                <?php echo $noticias[0]['texto_2'] ?>
+                            </textarea>
+                            
+                            <p class="text-right editor-title"><i class="margin-right text-right fas fa-edit icon-color"></i>Editor - <?php echo $noticias[0]['editor'] ?></p>
                         </div>
 
                         <div class="img-padding-top">
-                            <img class="img-fluid" src="<?php echo $noticias[0]['imagen'] ?>" alt="">
+                            <img class="img-fluid width-img" src="<?php echo $noticias[0]['imagen'] ?>" alt="">
                         </div>
                     </div>
                 </div>
@@ -218,6 +229,8 @@ var_dump($_SESSION['usuario']);
 
         <!-- INSTANCIAS DE CKEDITOR -->                                
         <script>
+            CKEDITOR.inline('editor-titulo');
+            CKEDITOR.inline('editor-subtitulo');
             CKEDITOR.inline('editor1');
             CKEDITOR.inline('editor2');
         </script>
