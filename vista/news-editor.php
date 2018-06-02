@@ -160,6 +160,11 @@ var_dump($_SESSION['usuario']);
                         <div class="img-padding-top">
                             <img class="img-fluid width-img" src="<?php echo $noticias[0]['imagen'] ?>" alt="">
                         </div>
+
+                        <?php if ($_SESSION['noticias'][0]['editor'] == $_SESSION['usuario']['nombre']) {
+                            echo "<p><input type='submit' value='Guardar Noticia'></p>";
+                        }?>
+
                     </div>
                 </div>
             </div>
