@@ -3,8 +3,10 @@ include '../datos/conexion.php';
 
 $cnx = Conexion::conectar();
 $query = "SELECT id, titulo, subtitulo FROM noticias";
+$query_publicadas = "SELECT id, autor, titulo, fecha from noticias_publicadas";
 
 $resultado = $cnx->query($query);
+$resultado_publicadas = $cnx->query($query_publicadas);
 
 $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
@@ -179,9 +181,9 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 				</a>
 					<p><?php echo $noticias[5]['subtitulo'] ?></p>
 					<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-				
+
 				<p>EUROPE</p>
-				
+
 			</div>
 
 			<div class="col-3">
@@ -191,7 +193,7 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 				</a>
 					<p><?php echo $noticias[6]['subtitulo'] ?></p>
 					<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-				
+
 				<p>EUROPE</p>
 			</div>
 
@@ -202,8 +204,8 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 				</a>
 					<p><?php echo $noticias[8]['subtitulo'] ?></p>
 					<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-				
-				<p>EUROPE</p>				
+
+				<p>EUROPE</p>
 			</div>
 
 			<div class="col-3">
@@ -213,8 +215,8 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 				</a>
 					<p><?php echo $noticias[7]['subtitulo'] ?></p>
 					<img class="barra-news" src="img/barraNewsRoja.png" alt="">
-				
-				<p>EUROPE</p>				
+
+				<p>EUROPE</p>
 			</div>
 		</div>
 	</div>
@@ -270,6 +272,57 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 						</a>
 						<p><?php echo $noticias[11]['subtitulo'] ?></p>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- LATEST NEWS PUBLISHED -->
+		<div class="container latest-news">
+			<div class="row">
+				<div class ="col-12">
+					<div>
+						<img class="barra-news" src="img/barraNewsAmarillo.png" height="33"
+							alt="">
+						<h2>Latest News Published</h2>
+					</div>
+
+					<table class="table table-hover table-striped table-dark">
+					<thead>
+						<tr>
+						<th scope="col">#</th>
+						<th scope="col">Autor</th>
+						<th scope="col">Titulo</th>
+						<th scope="col">Fecha</th>
+						</tr>
+					</thead>
+					<tbody>
+					<?php
+					
+					while ($noticias_publicadas = $resultado_publicadas->fetch(PDO::FETCH_ASSOC)) {
+												
+						echo '<tr>';
+						echo '<td>';
+						echo '<a href="latest-news/news-index-latest.php?nid='.$noticias_publicadas['id'].'">';
+						echo $noticias_publicadas['id'];						
+						echo '</td>';
+						echo '<td>';
+						echo $noticias_publicadas['autor'];
+						echo '</td>';
+						echo '<td>';
+						echo $noticias_publicadas['titulo'];
+						echo '</td>';
+						echo '<td>';
+						echo $noticias_publicadas['fecha'];
+						echo '</td>';
+						echo '</a>';
+						echo '</tr>';
+												
+					}
+
+					?>
+					</tbody>
+					</table>
 				</div>
 			</div>
 		</div>

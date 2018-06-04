@@ -1,11 +1,10 @@
 <?php
-include '../datos/conexion.php';
-session_start();
+include '../../datos/conexion.php';
 
 $cnx = Conexion::conectar();
 $id_news = $_GET['nid'];
 
-$query = "SELECT * FROM noticias WHERE id = '$id_news'";
+$query = "SELECT * FROM noticias_publicadas WHERE id = '$id_news'";
 
 $resultado = $cnx->query($query);
 
@@ -23,13 +22,13 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Bootstrap core CSS -->
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/bootstrap-grid.css" rel="stylesheet">
-        <link href="css/bootstrap-reboot.css" rel="stylesheet">
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-grid.css" rel="stylesheet">
+        <link href="../css/bootstrap-reboot.css" rel="stylesheet">
 
         <!-- Custom CSS Stylesheets -->
-        <link href="css/index-style.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/news-style.css">
+        <link href="../css/index-style.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/news-style.css">
         <link rel="stylesheet" href="css/overhang.css">
     </head>
 
@@ -38,7 +37,7 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="periodista.php">World News</a>
+                <a class="navbar-brand" href="../index.php">World News</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -48,16 +47,8 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active li-sign-in">
                             <a class="nav-link" href="cerrar-sesion.php">
-                                <img class="icon-position" src="img/exit_delete_close_remove_door-48.png" height="24px" alt="Sign-In Icon">
-                                <span id="sign-position"><?php echo $_SESSION["usuario"]["nombre"] ?>
-                                / <?php 
-                                        if (isset($_SESSION['usuario'])) {
-                                            echo $_SESSION["usuario"]["rol"] == 0 ? 'Admin' : '';
-                                            echo $_SESSION["usuario"]["rol"] == 1 ? 'Editor' : '';
-                                            echo $_SESSION["usuario"]["rol"] == 2 ? 'Periodista':'';
-                                        }
-                                   ?>
-                                </span>
+                                <img class="icon-position" src="../img/exit_delete_close_remove_door-48.png" height="24px" alt="Sign-In Icon">
+                                <span id="sign-position">Sign in</span>
                             </a>
                         </li>
 
@@ -142,10 +133,6 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
                         <div class="img-padding-top">
                             <img class="img-fluid" src="<?php echo $noticias[0]['imagen'] ?>" alt="">
                         </div>
-
-                        <?php if ($_SESSION['noticias'][0]['autor'] == $_SESSION['usuario']['nombre']) {
-                            echo "<p><input type='submit' value='Guardar Noticia'></p>";
-                        }?>
                     </div>
                 </div>
             </div>
