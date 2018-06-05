@@ -230,6 +230,14 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
         <script src="js/app.js"></script>
         <script src="js/bootstrap.min.js"></script>
 
+        <!-- INSTANCIAS DE CKEDITOR -->                                
+        <script>
+            CKEDITOR.inline('editor-titulo');
+            CKEDITOR.inline('editor-subtitulo');
+            CKEDITOR.inline('editor1');
+            CKEDITOR.inline('editor2');
+        </script>
+
     </body>
 
     </html>
