@@ -52,7 +52,7 @@ $(document).ready(function () {
 				if (response.estado == "true") {
 					$("body").overhang({
 						type: "success",
-						message: "Noticia Actualizada",
+						message: "Noticia Actualizada Correctamente",
 						
 					});
 				} else {

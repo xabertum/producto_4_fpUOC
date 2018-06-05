@@ -13,8 +13,6 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
 $_SESSION['noticias'] = $noticias;
 
-var_dump($_SESSION['usuario']);
-
 ?>
 
     <!DOCTYPE html>
@@ -121,52 +119,54 @@ var_dump($_SESSION['usuario']);
 
         <div class="container">
             <div class="wrapper-news">
-                <header>
+            <form action="newsCode.php" method="POST" id="form-news">
+                <input type="hidden" id="id_news" name="id_news" value="<?php echo $id_news ?>">
+                    <header>
+                            <div>
+                                <textarea id="editor-titulo" name="editor-titulo" cols=90 rows=1>
+                                    <h2><?php echo $noticias[0]['titulo'] ?></h2>
+                                </textarea>
+                            </div>
+                            <div>
+                                <textarea id="editor-subtitulo" name="editor-subtitulo" cols=90 rows=1>
+                                    <h4><?php echo $noticias[0]['subtitulo'] ?></h4>
+                                </textarea>
+                            </div>                                       
+                            <div class="fecha">
+                                <i class="fas fa-paragraph icon-color"></i>
+                                <span>By <?php echo $noticias[0]['autor'] ?></span>
+
+                                <i class="fas fa-clock icon-color"></i>
+                                <span><?php echo $noticias[0]['fecha'] ?></span>
+                            </div>
+                        </header>
+
                     <div>
-                        <textarea id="editor-titulo" cols=90 rows=1>
-                            <h2><?php echo $noticias[0]['titulo'] ?></h2>
-                        </textarea>
-                    </div>
-                     <div>
-                        <textarea id="editor-subtitulo" cols=90 rows=1>
-                            <h4><?php echo $noticias[0]['subtitulo'] ?></h4>
-                        </textarea>
-                    </div>                                       
-                    <div class="fecha">
-                        <i class="fas fa-paragraph icon-color"></i>
-                        <span>By <?php echo $noticias[0]['autor'] ?></span>
+                        <div class="container-news">
+                            <div>
+                                <textarea id="editor1" name="editor1" cols="45" rows="30" class="news-text">
+                                    <?php echo $noticias[0]['texto'] ?>
+                                </textarea>
+                            </div>
 
-                        <i class="fas fa-clock icon-color"></i>
-                        <span><?php echo $noticias[0]['fecha'] ?></span>
-                    </div>
-                </header>
+                            <div>
+                                <textarea id="editor2" name="editor2" cols="45" rows="30" class="news-text">
+                                    <?php echo $noticias[0]['texto_2'] ?>
+                                </textarea>
+                                <p class="text-right editor-title"><i class="margin-right text-right fas fa-edit icon-color"></i>
+                                Editor - <?php echo $noticias[0]['editor'] ?></p>
+                            </div>
 
-                <div>
-                    <div class="container-news">
-                        <div>
-                            <textarea id="editor1" name="editor1" cols="45" rows="30" class="news-text">
-                                <?php echo $noticias[0]['texto'] ?>
-                            </textarea>
-                        </div>                    
-                        <div>
-                            <textarea id="editor2" name="editor2" cols="45" rows="30" class="news-text">
-                                <?php echo $noticias[0]['texto_2'] ?>
-                            </textarea>
-                            
-                            <p class="text-right editor-title"><i class="margin-right text-right fas fa-edit icon-color"></i>
-                            Editor - <?php echo $noticias[0]['editor'] ?></p>
+                            <div class="img-padding-top">
+                                <img class="img-fluid" src="<?php echo $noticias[0]['imagen'] ?>" alt="">
+                            </div>
+
+                            <?php if ($_SESSION['usuario']['rol'] == 1) {
+                                echo "<p><input type='submit' value='Actualizar Noticia'></p>";
+                            }?>
                         </div>
-
-                        <div class="img-padding-top">
-                            <img class="img-fluid width-img" src="<?php echo $noticias[0]['imagen'] ?>" alt="">
-                        </div>
-
-                        <?php if ($_SESSION['usuario']['rol'] == 1) {
-                            echo "<p><input type='submit' value='Guardar Noticia'></p>";
-                        }?>
-
                     </div>
-                </div>
+                </form>
             </div>
 
         </div>
