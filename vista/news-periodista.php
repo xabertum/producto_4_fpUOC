@@ -13,7 +13,6 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
 $_SESSION['noticias'] = $noticias;
 
-
 ?>
 
     <!DOCTYPE html>

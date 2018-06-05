@@ -17,14 +17,13 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $subtitulo = $_POST['editor-subtitulo'];
         $texto = $_POST['editor1'];
         $texto2 = $_POST['editor2'];
-        $imagen = "";
-        
+                
         $resultado = array(
             "estado" => "true",
         );
 
         if (NoticiaControlador::guardarNoticia($id_news, $autor, $editor, $titulo, $subtitulo,
-            $texto, $texto2, $imagen)) {
+            $texto, $texto2)) {
 
             return print(json_encode($resultado));
 
