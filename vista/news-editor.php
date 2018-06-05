@@ -13,7 +13,6 @@ $noticias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
 $_SESSION['noticias'] = $noticias;
 
-var_dump($_SESSION['noticias'][0]['id']);
 var_dump($_SESSION['usuario']);
 
 ?>
@@ -154,14 +153,15 @@ var_dump($_SESSION['usuario']);
                                 <?php echo $noticias[0]['texto_2'] ?>
                             </textarea>
                             
-                            <p class="text-right editor-title"><i class="margin-right text-right fas fa-edit icon-color"></i>Editor - <?php echo $noticias[0]['editor'] ?></p>
+                            <p class="text-right editor-title"><i class="margin-right text-right fas fa-edit icon-color"></i>
+                            Editor - <?php echo $noticias[0]['editor'] ?></p>
                         </div>
 
                         <div class="img-padding-top">
                             <img class="img-fluid width-img" src="<?php echo $noticias[0]['imagen'] ?>" alt="">
                         </div>
 
-                        <?php if ($_SESSION['noticias'][0]['editor'] == $_SESSION['usuario']['nombre']) {
+                        <?php if ($_SESSION['usuario']['rol'] == 1) {
                             echo "<p><input type='submit' value='Guardar Noticia'></p>";
                         }?>
 

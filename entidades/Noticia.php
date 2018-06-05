@@ -13,11 +13,6 @@ class Noticia {
     private $texto_2;
     private $imagen;
     
-    /*
-    private $fecha_creacion;
-    private $fecha_modificacion;
-    private $fecha_publicacion;
-    */
     
     //Getters & Setters
           

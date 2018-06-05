@@ -10,10 +10,11 @@ $resultado = array();
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     if (isset($_POST['editor1']) && isset($_POST['editor2'])) {
 
-        $autor = "prueba";
-        $editor = "prueba";
-        $titulo = "prueba";
-        $subtitulo = "pruaba";
+        $id_news = $_POST['id_news'];
+        $autor = $_SESSION['noticias'][0]['autor'];
+        $editor = $_SESSION['noticias'][0]['editor'];
+        $titulo = $_POST['editor-titulo'];
+        $subtitulo = $_POST['editor-subtitulo'];
         $texto = $_POST['editor1'];
         $texto2 = $_POST['editor2'];
         $imagen = "";
@@ -22,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             "estado" => "true",
         );
 
-        if (NoticiaControlador::guardarNoticia($autor, $editor, $titulo, $subtitulo,
+        if (NoticiaControlador::guardarNoticia($id_news, $autor, $editor, $titulo, $subtitulo,
             $texto, $texto2, $imagen)) {
 
             return print(json_encode($resultado));
