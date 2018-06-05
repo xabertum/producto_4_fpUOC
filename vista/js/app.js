@@ -52,16 +52,14 @@ $(document).ready(function () {
 				if (response.estado == "true") {
 					$("body").overhang({
 						type: "success",
-						message: "Login correcto! Redirigiendo...",
-						callback: function () {
-							window.location.href = "news.html";
-						}
+						message: "Noticia Actualizada",
+						
 					});
 				} else {
 
 					$("body").overhang({
 						type: "error",
-						message: "Usuario o Password incorrecto"
+						message: "Error"
 					});
 
 				}
